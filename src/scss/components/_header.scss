@@ -11,6 +11,10 @@
         @include mq(lg) {
             width: rem(200);
         }
+
+        img {
+            display: block;
+        }
     }
 
     &__inner {
@@ -30,6 +34,15 @@
         @include mq(md-and-down) {
             display: block;
             width: 100%;
+            margin: rem(24) 0 0;
+
+            & > li {
+                &:first-child {
+                    a {
+                        border: none;
+                    }
+                }
+            }
         }
     }
 
@@ -98,7 +111,7 @@
             width: 100%;
             display: inline-block;
             padding: rem(20);
-            border-bottom: 1px solid $color-gray2;
+            border-top: 1px solid $color-gray2;
             font-size: rem(24);
             font-weight: 700;
         }
@@ -295,6 +308,10 @@
         }
     }
 
+    .c-social {
+        border-top: 1px solid $color-gray2;
+    }
+
     @include mq(md-and-down) {
         @include social-partner-devices;
     }
@@ -322,6 +339,7 @@
     .accordion-item-active {
         color: $color-white;
         position: relative;
+        border: none;
 
         &::before {
             content: '';
@@ -347,10 +365,6 @@
             &::before {
                 transform: rotate(-45deg);
             }                
-        }
-        
-        & + .c-accordion__content {
-            border-bottom: 1px solid $color-gray2;
         }
     }
 }
