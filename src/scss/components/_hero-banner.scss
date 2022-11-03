@@ -1,0 +1,95 @@
+.c-hero-banner {
+    margin-bottom: rem(48);
+    background: linear-gradient(241.25deg, #E0EFF8 0%, rgba(255, 255, 255, 0) 70.72%);
+
+    @include mq(md-and-up) {
+        margin-bottom: rem(80);
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    &__img {
+        @include mq(sm) {
+            padding: 0 rem(35);
+        }
+
+        @include mq(md-and-up) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        @include mq(md-and-up) {
+            padding: rem(45) 0;
+        }
+    }
+
+    &__title {
+        padding: rem(32) 0 rem(12);
+
+        @include mq(md-and-up) {
+            font-size: rem(48);
+            max-width: rem(715);
+        }
+
+        @include mq(xlg) {
+            font-size: rem(76);
+            max-width: rem(915);
+            padding-bottom: rem(32);
+        }
+        
+    }
+
+    &__description {
+        max-width: rem(574);
+        font-size: rem(20);
+        line-height: rem(28);
+        
+        @include mq(lg) {
+            padding-bottom: rem(32);
+        }
+    }
+
+    &__cta {
+        @include mq(sm) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            margin-right: rem(12);
+            text-align: center;
+
+            @include mq(sm) {
+                margin: 0;
+                width: 48%;
+            }
+        }
+    }
+
+    &__list {
+        @extend .u-font-primary-bold;
+        padding-top: rem(32);
+
+        @include mq(lg) {
+            padding-top: rem(80);
+        }
+
+        li {
+            padding-bottom: rem(6);
+        }
+
+        p {
+            display: inline-block;
+            vertical-align: bottom;
+            padding-left: rem(16);
+        }
+    }
+}

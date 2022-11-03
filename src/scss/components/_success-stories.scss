@@ -1,0 +1,90 @@
+.c-success-stories {
+    padding-bottom: rem(56);
+
+    @include mq(lg) {
+        padding-bottom: rem(120);
+    }
+
+    &__text {
+        max-width: rem(710);
+        line-height: rem(24);
+        margin: rem(32) auto;
+        font-size: rem(20);
+        color: $color-text-secondary;
+    }
+
+    &__review {
+        margin-top: rem(48);
+        
+        & > div {
+
+            @include mq(sm) {
+                &:first-child {
+                    margin-bottom: rem(20);
+                }
+            }
+            @include mq(md-and-up) {
+                margin-right: rem(24);
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        &__block {
+            padding: rem(32) rem(20);
+            background: $color-gray1;
+
+            @include mq(lg) {
+                padding: rem(56) rem(70);
+            }
+        }
+        
+        &__img {
+            width: rem(70);
+            margin-bottom: rem(16);
+            border-radius: 100%;
+
+            @include mq(lg) {
+                margin-bottom: rem(30);
+            }
+        }
+        
+        &__rate {
+            font-size: rem(20);
+            color: $color-yellow;
+
+            @include mq(lg) {
+                margin-bottom: rem(30);
+            }
+        }
+
+        &__text {
+            @extend .u-font-secondary-bold;
+            font-size: rem(24);
+            line-height: rem(34);
+
+            @include mq(lg) {
+                padding-bottom: rem(8);
+            }
+        }
+
+        &__reviwer-data {
+            margin-bottom: rem(20);
+            color: $color-gray4;
+
+            @include mq(lg) {
+                margin-bottom: rem(35);
+            }
+            
+            p {
+                margin: rem(8) 0;
+
+                &:last-child {
+                    font-size: rem(14);
+                }
+            }
+        }
+    }
+}

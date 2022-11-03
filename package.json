@@ -1,0 +1,36 @@
+{
+  "name": "shoparize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserlists": [
+    "last 3 versions"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "7.19.4",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.55.0",
+    "swiper": "^8.4.4",
+    "webpack": "5.74.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

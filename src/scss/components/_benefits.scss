@@ -1,0 +1,114 @@
+.c-benefits {
+    margin-bottom: rem(56);
+
+    @include mq(md-and-up) {
+        margin-bottom: rem(72);
+    }
+
+    &__list {
+        margin: 0;
+    }
+
+    h2 {
+        margin-bottom: rem(48);
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(72);
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: rem(32);
+        cursor: pointer;
+
+        @include mq(md-and-up) {
+            width: 49%;
+            margin-bottom: rem(56);
+        }
+
+        &:hover {
+            .c-benefits__item__deco {
+                opacity: 1;
+            }
+        }
+
+        &__deco {
+            width: 26%;
+            padding: 0 rem(8);
+            border-radius: rem(4) 0 0 rem(4);
+            transition: all .4s;
+
+            @include mq(md-and-up) {
+                width: rem(208);
+                opacity: 0.4;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 26%;
+                width: 74%;
+                height: 100%;
+                border: rem(1) solid $color-green;
+                border-radius: 0 rem(4) rem(4) 0;
+                z-index: -1;
+
+                @include mq(md-and-up) {
+                    left: rem(208);
+                    width: calc(100% - rem(208));
+                }
+            }
+
+            &.u-color-bg-orange {
+                &::after {
+                    border-color: $color-orange;
+                }
+            }
+
+            &.u-color-bg-red {
+                &::after {
+                    border-color: $color-red;
+                }
+            }
+
+            &.u-color-bg-accent-blue {
+                &::after {
+                    border-color: $color-accent-blue;
+                }
+            }
+
+            svg {
+                max-width: 100%;
+
+                @include mq(sm) {
+                    height: 35%;
+                    padding-top: rem(40);
+                }
+
+                @include mq(md-and-up) {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        &__deco-wrapper {
+            height: 100%;
+            position: relative;
+        }
+
+        &__content {
+            padding: rem(32);
+            width: 74%;
+
+            @include mq(md-and-up) {
+                padding: rem(44) rem(40);
+                width: calc(100% - rem(208));
+            }
+        }
+    }
+}

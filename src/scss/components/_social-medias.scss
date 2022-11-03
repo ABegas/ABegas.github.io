@@ -1,0 +1,74 @@
+.c-social {
+    &__media {
+        margin: 0 0 rem(32);
+    
+        &__item {
+            padding-right: rem(12);
+    
+            svg {
+                fill: $color-social-media;
+                opacity: .5;
+                transition: all .4s;
+    
+                &:hover {
+                    fill: $color-red;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__partner {
+        &__item {
+            img {
+                box-shadow: 0px 15px 15px 0px $color-gray2;
+                border-radius: 15px;
+            }
+    
+            &--image-google {
+                width: rem(211);
+            }
+    
+            &--image-microsoft {
+                width: rem(154);
+            }
+        }
+    }
+}
+
+@mixin social-partner-devices {
+    .c-social {
+        padding: rem(32) 0;
+
+        &__media {
+            justify-content: center;
+        }
+
+        &__partner {
+            max-width: rem(375);
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: nowrap;
+
+            &__item {    
+                width: 50%;
+                margin: 0 rem(12);
+    
+                &--image-google {
+                    width: 100%;
+                }
+    
+                &--image-microsoft {
+                    width: 86%;
+                }
+    
+                &:first-child {
+                    width: 60%;
+                    text-align: right;
+                }
+            }
+        }
+
+        @content;
+    }   
+}

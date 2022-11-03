@@ -1,0 +1,55 @@
+/* ==========================================================================
+   # WIDTH UTILITIES
+   ========================================================================== */
+
+.u-w {
+    &1\/1 { width: 100%; }
+    &1\/2 { width: calc(100% / 2); }
+    &1\/3 { width: calc(100% / 3); }
+    &1\/4 { width: calc(100% / 4); }
+    &1\/5 { width: calc(100% / 5); }
+    &1\/6 { width: calc(100% / 6); }
+    &2\/3 { width: calc((100% / 3) * 2); }
+    &3\/4 { width: calc((100% / 4) * 3); }
+
+    @include mq(lg) {
+        &1\/1\@lg { width: 100%; }
+        &1\/2\@lg { width: calc(100% / 2); }
+        &1\/3\@lg { width: calc(100% / 3); }
+        &1\/4\@lg { width: calc(100% / 4); }
+        &1\/5\@lg { width: calc(100% / 5); }
+        &1\/6\@lg { width: calc(100% / 6); }
+        &2\/3\@lg { width: calc((100% / 3) * 2); }
+        &3\/4\@lg { width: calc((100% / 4) * 3); }
+    }
+
+    @include mq(md-and-up) {
+        &1\/1\@md-and-up { width: 100%; }
+        &1\/2\@md-and-up { width: calc(100% / 2); }
+        &1\/3\@md-and-up { width: calc(100% / 3); }
+        &1\/4\@md-and-up { width: calc(100% / 4); }
+        &1\/5\@md-and-up { width: calc(100% / 5); }
+        &1\/6\@md-and-up { width: calc(100% / 6); }
+        &2\/3\@md-and-up { width: calc((100% / 3) * 2); }
+        &3\/4\@md-and-up { width: calc((100% / 4) * 3); }
+    }
+
+    @include mq(sm) {
+        &1\/1\@sm { width: 100%; }
+        &1\/2\@sm { width: calc(100% / 2); }
+        &1\/3\@sm { width: calc(100% / 3); }
+        &1\/4\@sm { width: calc(100% / 4); }
+        &1\/5\@sm { width: calc(100% / 5); }
+        &1\/6\@sm { width: calc(100% / 6); }
+        &2\/3\@sm { width: calc((100% / 3) * 2); }
+        &3\/4\@sm { width: calc((100% / 4) * 3); }
+    }
+}
+
+.u-site-width {
+    width: 100%;
+    max-width: $base-container-width;
+    margin: 0 auto;
+    padding-left: $base-gutter * 2;
+    padding-right: $base-gutter * 2;
+}

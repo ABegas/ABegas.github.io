@@ -1,0 +1,111 @@
+body {
+    @extend .u-font-primary;
+    color: $color-black;
+}
+
+main {
+    padding-top: rem(65);
+
+    @include mq(lg) {
+        padding-top: rem(104);
+    }
+}
+
+.page {
+    height: 100%;
+
+    @include mq(md-and-down) {
+        overflow-x: hidden;
+    }
+    
+}
+
+a {
+    color: $color-text-primary;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h1 {
+    @extend .u-font-secondary-bold;
+    font-size: rem(48);
+    
+    @include mq(lg) {
+        font-size: rem(76);
+    }
+}
+
+h2 {
+    @extend .u-font-secondary-bold;
+    font-size: rem(40);
+    line-height: rem(50);
+    
+    @include mq(lg) {
+        font-size: rem(50);
+        line-height: rem(62.5)
+    }
+}
+
+h3 {
+    @extend .u-font-secondary-bold;
+    font-size: rem(30);
+    
+    @include mq(lg) {
+        font-size: rem(42);
+    }
+}
+
+h4 {
+    @extend .u-font-secondary-bold;
+    font-size: rem(24);
+    line-height: rem(34);
+}
+
+img,
+picture {
+    max-width: 100%;
+    height: auto;
+}
+
+.hr-decor {
+    display: flex;
+    line-height: rem(8);
+}
+
+.circle-with-icon {
+    display: inline-block;
+    width: rem(40);
+    min-width: rem(40);
+    height: rem(40);
+    position: relative;
+    border: 0;
+    border-radius: 100%;
+    background-color: rgba($color-green, 0.15);
+    cursor: pointer;
+    transition: all .5s;
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        stroke: $color-green;
+        transform: translate(-50%, -50%);
+        transition: all .5s;
+    }
+
+    &--hovered {
+        &:hover,
+        &:focus {
+            background-color: $color-red;
+
+            svg {
+                stroke: $color-white;
+            }   
+        }
+    }
+}

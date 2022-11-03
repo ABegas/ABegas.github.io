@@ -1,0 +1,163 @@
+/* All Settings will be here like :
+colors,fonts,sizes,breakpoints ect.*/
+
+// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+// @param {Number} $num - Number to strip unit from.
+// @returns {Number} The same number, sans unit.
+
+@function strip-unit($num) {
+    @return calc($num / ($num * 0 + 1));
+}
+
+// Converts one or more pixel values into matching rem values.
+// @param {Number|List} $values - One or more values to convert separated with spaces.
+// @param {Number} $base [16] - The base value to use when calculating the `rem`.
+// @returns {List} A list of converted values.
+
+@function rem($values, $base: 16) {
+    $rem-values: ();
+    $count: length($values);
+
+    @if $count == 1 {
+        @if $values == 'auto' {
+            @return $values;
+        }
+        @if unit($values) != 'rem' {
+            @return calc(strip-unit($values) / strip-unit($base) * 1rem);
+        }
+        @return $values;
+    }
+
+    @each $value in $values {
+        @if $value == 'auto' {
+            $rem-values: append($rem-values, auto);
+        } @else {
+            @if unit($value) != 'rem' {
+                $value: calc(strip-unit($value) / strip-unit($base) * 1rem);
+            }
+            @if $value == 0rem { /* stylelint-disable-line length-zero-no-unit */
+                $value: 0;
+            }
+            $rem-values: append($rem-values, $value);
+        }
+    }
+
+    @return $rem-values;
+}
+
+/*------------------------------- # FONTS # ------------------------------------*/
+$family-primary: 'Inter', sans-serif;
+$family-secondary: 'Ubuntu', sans-serif;
+
+$base-font-size: rem(16);
+
+/* Font Sizes */
+$font-size0: rem(12);
+$font-size1: rem(14);
+$font-size2: rem(15);
+$font-size3: rem(16);
+$font-size4: rem(18);
+$font-size5: rem(20);
+$font-size6: rem(24);
+$font-size7: rem(32);
+$font-size8: rem(48);
+
+/* Line Height */
+$line-height1: rem(16);
+$line-height2: rem(18);
+$line-height3: rem(20);
+$line-height4: rem(24);
+$line-height5: rem(32);
+
+/* Letter Spacing */
+$letter-spacing0:    0;
+$letter-spacing1:    rem(0.6);
+$letter-spacing2:    0.4px;
+
+/*------------------------------- # COLORS # ------------------------------------*/
+// all unique сolors should start with prefix color-
+// it's need for compiling styleguide
+
+$color-black: #1B2328;
+$color-white: #fff;
+
+$color-blue: #007DC2;
+$color-accent-blue: #577590;
+$color-green: #3dbeb3;
+$color-green-light: #5ac8bf;
+$color-orange: #F7981D;
+$color-red: #E51F37;
+$color-yellow: #FDD05A;
+
+/* Grayscale */
+$color-gray0: #F9F9F9;
+$color-gray1: #F8FCFF; //used
+$color-gray2: #DFDDE3; //used
+$color-gray3: #a4a4a4; //used
+$color-gray4: #5B5C64; //used
+$color-gray5: #577590; //used
+
+
+/* Shared color values */
+$color-text-primary: $color-black;
+$color-text-secondary: $color-gray4;
+
+$color-social-media: $color-gray5;
+
+/* Overlay bg color */
+$overlay-light: rgba($color-white, 0.8);
+
+/*------------------------------- # BASE / CORE # ------------------------------------*/
+
+/* Core Unit Sizes */
+$base-gutter: rem(5) * 2;
+$base-container-width: rem(1268) + $base-gutter * 2;
+
+/* ------------------ # Z-INDEX # ------------------ */
+
+$z-index-primary: 1;
+$z-index-secondary: 2;
+$z-index-third: 3;
+$z-index-10: 10;
+$z-index-20: 20;
+
+/* -------------------------------
+   # BREAKPOINTS
+   # Mobile - 					sm -			[0 - 767px]
+   # Tablet and up - 			md-and-up -  	[768px - ...]
+   # Desktop and up - 		    lg-and-up - 	[1200px - ...]
+-------------------------------*/
+
+/* Breakpoints */
+$hover-desktop: 1025px;
+
+$mobile: 767px;
+$tablet: 768px;
+$tablet-down: 1023px; 
+$desktop: 1024px;
+$desktop-lg: 1280px;
+
+@mixin mq($point) {
+    @if $point == hover {
+        @media screen and (min-width: $hover-desktop), print {
+            &:hover {
+                @content ;
+            }
+        } // for hovers
+    }
+    @if $point == xlg {
+        @media screen and (min-width: $desktop-lg), print { @content ; } // ensure we get larger than tablet view on print pages
+    }
+    @if $point == lg {
+        @media screen and (min-width: $desktop), print { @content ; } // ensure we get larger than tablet view on print pages
+    }
+    @else if $point == md-and-up {
+        @media screen and (min-width: $tablet), print { @content ; } // ensure we get larger than tablet view on print pages
+    }
+    @else if $point == md-and-down {
+        @media screen and (max-width: $tablet-down), print { @content ; } // ensure we get larger than tablet view on print pages
+    }
+    @else if $point == sm {
+        @media screen and (max-width: $mobile) { @content ; }
+    }
+}

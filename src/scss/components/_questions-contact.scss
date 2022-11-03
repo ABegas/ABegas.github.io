@@ -1,0 +1,80 @@
+.c-questions-contact {
+    padding-bottom: rem(48);
+
+    @include mq(lg) {
+        padding-bottom: rem(128);
+    }
+
+    &__title {
+        padding-bottom: rem(20);
+    }
+
+    &__description {
+        font-size: rem(20);
+        line-height: rem(28);
+        padding-bottom: rem(25);
+        color: $color-text-secondary;
+
+        @include mq(lg) {
+            max-width: rem(500);
+        }
+    }
+
+    picture {
+        position: relative;
+        margin-right: rem(80);
+    }
+
+    &__img {
+        position: absolute;
+        top: rem(20);
+        right: 0;
+        max-width: initial;
+        width: 135%;
+
+        @include mq(xlg) {
+            width: 150%;
+        }
+    }
+
+    &__list {
+        margin-bottom: rem(40);
+        border-bottom: rem(1) solid $color-gray2;
+        &__icon {
+            margin-right: rem(15);
+        }
+
+        dt {
+            @extend .u-font-secondary-bold;
+
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            font-size: rem(24);
+            line-height: rem(35);
+        }
+
+        dd {
+            line-height: rem(24);
+            color: $color-text-secondary;
+            padding-left: rem(16);
+            padding-bottom: rem(40);
+        }
+    }
+
+    &__form-description {
+        strong {
+            font-size: rem(20);
+        }
+
+        p {
+            color: $color-text-secondary;
+            line-height: rem(24);
+            padding-bottom: rem(16);
+
+            @include mq(lg) {
+                max-width: rem(500);
+            }
+        }
+    }
+}

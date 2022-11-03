@@ -1,0 +1,114 @@
+.c-footer {
+    &__signup {
+        padding: rem(48) 0 rem(32);
+
+        @include mq (lg) {
+            padding: rem(96) 0 rem(80);
+        }
+
+        h3 {
+            padding-bottom: rem(12);
+        }
+        &__description {
+            font-size: rem(18);
+            color: $color-text-secondary;
+            line-height: rem(28);
+            
+
+            @include mq(md-and-up) {
+                padding-right: rem(55);
+                font-size: rem(20);
+            }
+        }
+
+        &__form {
+            padding: rem(20) 0 0 0;
+
+            @include mq(md-and-up) {
+                padding: rem(20) 0 0 rem(25);
+            }
+        }
+
+        &__form-wrapper {
+            margin-bottom: rem(24);
+
+            input {
+                cursor: pointer;
+            }
+        }
+
+        &__privacy-policy {
+            font-size: rem(14);
+            line-height: rem(20);
+
+            &__link {
+                @extend .u-font-primary-bold;
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 2px;
+                }
+            }
+        }
+
+        &__submit {
+            position: absolute;
+            right: rem(10);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__nav {
+        padding: rem(48) 0 rem(24);
+
+        @include mq(lg) {
+            padding: rem(62) 0;
+        }
+
+        &__title {
+            @extend .u-font-secondary-bold;
+            font-size: rem(18);
+        }
+
+        &__column {
+
+            @include mq(sm) {
+                padding-bottom: rem(20);
+            }
+
+            li {
+                padding-bottom: rem(20);
+            }
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: rem(2);
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        @include mq(sm) {
+            text-align: center;
+        }
+    }
+
+    &__copyright {
+        font-size: rem(12);
+        color: $color-text-secondary;
+    }
+
+    @include mq(sm) {
+        @include social-partner-devices {
+            border-top: rem(1) solid $color-gray2;
+            border-bottom: rem(1) solid $color-gray2;
+            margin-bottom: rem(24)
+        };
+    }
+}

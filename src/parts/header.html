@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="page">
+    <header class="c-header">
+        <div class="hr-decor u-hidden@sm">
+            <span class="o-grid__item u-color-bg-blue">&nbsp;</span>
+            <span class="o-grid__item u-color-bg-green">&nbsp;</span>
+            <span class="o-grid__item u-color-bg-orange">&nbsp;</span>
+            <span class="o-grid__item u-color-bg-red">&nbsp;</span>
+        </div>
+        <div class="c-header__inner o-grid o-grid--mobile o-grid--between o-grid--middle u-font-secondary">
+            <a href="index.html" class="c-header__logo">
+                <img src="./img/logo.svg" alt="Shoparize">
+            </a>
+            <button class="c-header__hamburger-btn js-hamburger-btn u-hidden@lg">
+                    <div class="c-header__hamburger-btn__bar"></div>
+                    <div class="c-header__hamburger-btn__bar"></div>
+                    <div class="c-header__hamburger-btn__bar"> </div>
+            </button>
+            <div class="c-header__hamburger-menu o-grid o-grid--middle o-grid__item">
+                <ul class="c-header__nav o-grid o-grid__item o-grid--center c-accordion js-accordion">
+                    <li class="c-header__nav__item js-header-nav-item">
+                        <a class="c-header__nav__item-link c-accordion__item js-accordion-item">Services
+                            <span class="c-header__nav__item-link--arrow">&nbsp;</span>
+                        </a>
+                        <ul class="c-header__subnav c-accordion__content js-accordion-content">
+                            <li class="c-header__subnav__item">
+                                <a href="premium-css.html" class="c-header__subnav__item-link">Premium CSS</a>
+                            </li>
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Managed Ads</a>
+                            </li>
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Comparison Shopping</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="c-header__nav__item js-header-nav-item">
+                        <a href="#" class="c-header__nav__item-link ">Why Shoparize</a>
+                    </li>
+                    <li class="c-header__nav__item js-header-nav-item">
+                        <a href="#" class="c-header__nav__item-link">Pricing</a>
+                    </li>
+                    <li class="c-header__nav__item js-header-nav-item">
+                        <a class="c-header__nav__item-link c-accordion__item js-accordion-item">Learn
+                            <span class="c-header__nav__item-link--arrow">&nbsp;</span>
+                        </a>
+                        <ul class="c-header__subnav c-accordion__content js-accordion-content">
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Blog</a>
+                            </li>
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Case</a>
+                            </li>
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">FAQ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="c-header__nav__item js-header-nav-item">
+                        <a class="c-header__nav__item-link c-accordion__item js-accordion-item">About us
+                            <span class="c-header__nav__item-link--arrow">&nbsp;</span>
+                        </a>
+                        <ul class="c-header__subnav c-accordion__content js-accordion-content">
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Who we are</a>
+                            </li>
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Partners</a>
+                            </li>
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Careers</a>
+                            </li>
+                            <li class="c-header__subnav__item">
+                                <a href="#" class="c-header__subnav__item-link">Contact</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="c-header__utility-nav o-grid o-grid--mobile o-grid--right o-grid--middle">
+                    <li><button class="o-btn o-btn__primary c-header__utility-nav__button">Register</button></li>
+                    <li><a href="#" class="c-header__utility-nav__link" alt="Log in">Log in</a></li>
+                </ul>
+                <div class="c-social u-hidden@lg">
+                    <ul class="c-social__media o-grid o-grid--mobile">
+                        <li class="c-social__media__item">
+                            <a href="#" title="Twitter">
+                                <span class="u-sr-only">Twitter</span>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M42.2073 0.727539H5.06487C2.21588 0.727539 0 3.04894 0 5.79241V42.9348C0 45.7838 2.21588 47.9997 5.06487 47.9997H42.2073C44.9507 47.9997 47.2721 45.7838 47.2721 42.9348V5.79241C47.2721 3.04894 44.9507 0.727539 42.2073 0.727539ZM37.0369 17.5049C37.0369 17.8215 37.0369 18.138 37.0369 18.4546C37.0369 27.5292 30.0727 38.081 17.305 38.081C13.4008 38.081 9.81319 37.0258 6.75316 35.021C7.28076 35.1265 7.80835 35.1265 8.33594 35.1265C11.607 35.1265 14.5615 33.9658 16.9884 32.172C13.9284 32.0664 11.396 30.0616 10.4463 27.3181C11.607 27.5292 12.5567 27.5292 13.6118 27.2126C10.4463 26.5795 8.1249 23.836 8.1249 20.4594V20.3539C8.96905 20.8815 10.0242 21.1981 11.1849 21.1981C9.49664 20.0374 8.1249 17.5049 8.1249 15.5001C8.1249 14.1283 8.44146 12.9676 9.07456 11.9125C12.4511 16.1332 17.6215 18.8767 23.3195 19.1932C22.3699 14.5504 25.852 10.6462 30.0727 10.6462C32.0775 10.6462 33.8713 11.4904 35.1376 12.8621C36.7203 12.5456 38.1976 12.018 39.5693 11.1738C39.0417 12.8621 37.881 14.1283 36.5093 14.9725C37.881 14.867 39.2528 14.4449 40.519 13.9173C39.5693 15.289 38.3031 16.5553 37.0369 17.5049Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="c-social__media__item">
+                            <a href="#" title="Linkedin">
+                                <span class="u-sr-only">Linkedin</span>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M44.1677 0.727539H3.54322C1.74941 0.727539 0.272156 2.31031 0.272156 4.20964V44.6231C0.272156 46.5224 1.74941 47.9997 3.54322 47.9997H44.1677C45.9615 47.9997 47.5443 46.5224 47.5443 44.6231V4.20964C47.5443 2.31031 45.9615 0.727539 44.1677 0.727539ZM14.5171 41.2465H7.55291V18.7712H14.5171V41.2465ZM11.035 15.6056C8.71361 15.6056 6.9198 13.8118 6.9198 11.5959C6.9198 9.38003 8.71361 7.4807 11.035 7.4807C13.2509 7.4807 15.0447 9.38003 15.0447 11.5959C15.0447 13.8118 13.2509 15.6056 11.035 15.6056ZM40.7911 41.2465H33.7214V30.2726C33.7214 27.7402 33.7214 24.3636 30.1338 24.3636C26.4407 24.3636 25.9131 27.2126 25.9131 30.1671V41.2465H18.9489V18.7712H25.5965V21.8312H25.702C26.6517 20.0374 28.9731 18.138 32.3497 18.138C39.4194 18.138 40.7911 22.8864 40.7911 28.9009V41.2465Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="c-social__media__item">
+                            <a href="#" title="Facebook">
+                                <span class="u-sr-only">Facebook</span>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M47.8165 5.79241C47.8165 3.04894 45.4951 0.727539 42.7516 0.727539H5.60918C2.76019 0.727539 0.544312 3.04894 0.544312 5.79241V42.9348C0.544312 45.7838 2.76019 47.9997 5.60918 47.9997H26.2908V29.323H19.9597V22.2533H26.2908V16.9773C26.2908 10.8573 30.0894 7.4807 35.4708 7.4807C38.1088 7.4807 40.3247 7.69174 41.0633 7.79726V14.2339H37.2646C34.3101 14.2339 33.677 15.6056 33.677 17.6105V22.2533H41.0633L40.1136 29.323H33.677V47.9997H42.7516C45.4951 47.9997 47.8165 45.7838 47.8165 42.9348V5.79241Z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="c-social__partner">
+                        <p class="c-social__partner__item">
+                            <a href="#" title="google-partmer">
+                                <img class="c-social__partner__item--image-google" src="./img/google-partner.png" width="211" alt="">
+                            </a>
+                        </p>
+                        <p class="c-social__partner__item">
+                            <a href="#" title="microsoft-partmer">
+                                <img class="c-social__partner__item--image-microsoft" src="./img/microsoft-partner.png" width="154" alt="">
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

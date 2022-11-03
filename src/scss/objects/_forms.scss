@@ -1,0 +1,61 @@
+.o-input-wrapper {
+    position: relative;
+
+    label {
+        position: absolute;
+        top: rem(25);
+        left: rem(12);
+        font-size: rem(16);
+        color: $color-text-secondary;
+        transition: all .5s;
+    }
+}
+
+.o-input {
+    @extend .u-font-primary-bold;
+    width: 100%;
+    height: rem(64);
+    padding-top: rem(18);
+    border: rem(1) solid $color-gray2;
+    border-radius: rem(4);
+    text-indent: rem(10);
+    transition: all .3s;
+
+    &--required {
+        position: relative;
+
+        label {
+
+            &::after {
+                content: "•";
+                color: $color-red;
+                position: absolute;
+                top: 50%;
+                right: rem(-10);
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &:hover {
+        border-color: $color-green;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 rem(1) $color-green;
+        border-color: $color-green;
+        outline: none;
+
+        & ~ label {
+            top: rem(10);
+            font-size: rem(12);
+        }
+    }
+
+    &:not(:placeholder-shown) {
+        & ~ label {
+            top: rem(10);
+            font-size: rem(12);
+        }
+    }
+}

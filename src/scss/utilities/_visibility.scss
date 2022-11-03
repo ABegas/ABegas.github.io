@@ -1,0 +1,39 @@
+/* ==========================================================================
+   # Visibility utilities
+   ========================================================================== */
+
+.u-visible { display: inherit; }
+
+.u-hidden,
+.u-visually-hidden { display: none !important; }
+
+.u-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@include mq(lg) {
+    .u-visible\@lg { display: inherit; }
+    .u-hidden\@lg { display: none !important; }
+}
+
+@include mq(md-and-up) {
+    .u-visible\@md-and-up { display: inherit; }
+    .u-hidden\@md-and-up { display: none !important; }
+}
+
+@include mq(md-and-down) {
+    .u-visible\@md-and-down { display: inherit; }
+    .u-hidden\@md-and-down { display: none !important; }
+}
+
+@include mq(sm) {
+    .u-visible\@sm { display: inherit; }
+    .u-hidden\@sm { display: none !important; }
+}

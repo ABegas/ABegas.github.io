@@ -1,0 +1,96 @@
+.c-merchants {
+    padding-bottom: rem(48);
+
+    @include mq(lg) {
+        padding-bottom: rem(55);
+    }
+
+    h3 {
+        margin-bottom: rem(45);
+    }
+
+    &__carousel {
+        @include mq(md-and-up) {
+            padding: 0 rem(80);
+        }
+        
+        .swiper-slide {
+            img {
+                transform: scale(0.5);
+                transition: all .3s;
+            }
+
+            &.c-merchants__carousel__slide {
+                &--active {
+                    img {
+                        transform: scale(1.15);
+                    }
+                }
+
+                &--prev {
+                    img {
+                        transform: scale(0.5) translate(rem(-50));
+                        
+                        @include mq(md-and-up) {
+                            transform: scale(0.5) translate(rem(-40));
+                        }
+                    }
+                }
+
+                &--next {
+                    img {
+                        transform: scale(0.5) translate(rem(50));
+
+                        @include mq(md-and-up) {
+                            transform: scale(0.5) translate(rem(40));
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .swiper-wrapper {
+            padding: rem(25) 0;
+            align-items: center;
+        }
+
+        .circle-with-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: rem(56);
+            height: rem(56);
+        }
+
+        &__next,
+        &__prev {
+            display: none;
+            position: absolute;
+            top: 0;
+            width: rem(76);
+            height: 100%;
+            background: $color-white;          
+            z-index: 10;
+
+            @include mq(md-and-up) {
+                display: block;
+                
+            }
+        }
+
+        &__next {
+            right: 0;
+        }
+
+        &__prev {
+            left: 0;
+            .circle-with-icon {
+                left: rem(20);
+            }
+        }
+
+        
+    }
+}

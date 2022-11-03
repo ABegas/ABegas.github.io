@@ -1,0 +1,76 @@
+/* ==========================================================================
+   # GRID
+   ========================================================================== */
+
+$gutter: $base-gutter;
+
+@include mq(md-and-up) {
+    .o-grid {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+/* Grid Item */
+.o-grid {
+    &__item {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        &[class*="u-w"] {
+            flex: none;
+        }
+
+        &--narrow {
+            flex: none;
+        }
+    }
+
+    &--gutter {
+        margin-left: -$base-gutter;
+        margin-right: -$base-gutter;
+
+        > .o-grid__item {
+            padding-left: $base-gutter;
+            padding-right: $base-gutter;
+        }
+    }
+
+    &--equal {
+        > .o-grid__item { display: flex; }
+    }
+
+    &--wrap { flex-wrap: wrap; }
+
+    &--top { align-items: flex-start; }
+
+    &--middle { align-items: center; }
+
+    &--bottom { align-items: flex-end; }
+
+    &--right { justify-content: flex-end; }
+
+    &--center { justify-content: center; }
+
+    &--left { justify-content: flex-start; }
+
+    &--between { justify-content: space-between; }
+
+    &--around { justify-content: space-around; }
+
+    &--column { flex-direction: column; }
+
+    &--reverse {
+        @include mq(md-and-down) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &--mobile {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--nowrap { flex-wrap: nowrap; }
+}

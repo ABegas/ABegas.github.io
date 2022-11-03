@@ -1,0 +1,74 @@
+/* ==========================================================================
+   # Typhography utilities
+   # Font Family
+   # Text alignment
+   # Text transformation
+   # Text decoration
+   ========================================================================== */
+
+/* Text align utilities */
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+.u-text-justify { text-align: justify; }
+.u-text-nowrap { white-space: nowrap; }
+
+.u-text-truncated {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Font Size */
+.u-font-primary {
+    font-family: $family-primary;
+    font-weight: 400;
+}
+
+.u-font-primary-bold {
+    font-family: $family-primary;
+    font-weight: 700;
+}
+
+.u-font-secondary {
+    font-family: $family-secondary;
+    font-weight: 500;
+}
+
+.u-font-secondary-bold {
+    font-family: $family-secondary;
+    font-weight: 700;
+}
+
+.u-paragraph-primary {
+    line-height: rem(24);
+    color: $color-text-secondary;
+}
+
+/* Font Size */
+.u-font-size0 { font-size: $font-size0; } /* 12px */
+.u-font-size1 { font-size: $font-size1; } /* 14px */
+.u-font-size2 { font-size: $font-size2; } /* 15px */
+.u-font-size3 { font-size: $font-size3; } /* 16px */
+.u-font-size4 { font-size: $font-size4; } /* 18px */
+.u-font-size5 { font-size: $font-size5; } /* 20px */
+.u-font-size6 { font-size: $font-size6; } /* 24px */
+.u-font-size7 { font-size: $font-size7; } /* 32px */
+
+/* Line-height */
+.u-line-height1 { line-height: $line-height1; } /* 16 */
+.u-line-height2 { line-height: $line-height2; } /* 18 */
+.u-line-height3 { line-height: $line-height3; } /* 20 */
+.u-line-height4 { line-height: $line-height4; } /* 24 */
+.u-line-height5 { line-height: $line-height5; } /* 32 */
+
+/* Text transformation */
+.u-text-lowercase { text-transform: lowercase; }
+.u-text-uppercase { text-transform: uppercase; }
+.u-text-capitalize { text-transform: capitalize; }
+.u-text-notransform { text-transform: none; }
+
+/* Text decoration */
+.u-text-underline { text-decoration: underline; }
+.u-text-line-through { text-decoration: line-through; }
