@@ -57,6 +57,7 @@
             right: rem(10);
             top: 50%;
             transform: translateY(-50%);
+            cursor: pointer;
         }
     }
 
@@ -99,6 +100,11 @@
         }
     }
 
+    &__logo {
+        display: inline-block;
+        max-width: rem(168);
+    }
+
     &__copyright {
         font-size: rem(12);
         color: $color-text-secondary;
@@ -108,7 +114,7 @@
         @include social-partner-devices {
             border-top: rem(1) solid $color-gray2;
             border-bottom: rem(1) solid $color-gray2;
-            margin-bottom: rem(24)
-        };
+            margin-bottom: rem(24);
+        }
     }
 }

@@ -40,7 +40,7 @@
             transition: all .4s;
 
             @include mq(md-and-up) {
-                width: rem(208);
+                width: 34%;
                 opacity: 0.4;
             }
 
@@ -56,8 +56,8 @@
                 z-index: -1;
 
                 @include mq(md-and-up) {
-                    left: rem(208);
-                    width: calc(100% - rem(208));
+                    left: 34%;
+                    width: 66%;
                 }
             }
 
@@ -80,18 +80,21 @@
             }
 
             svg {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 max-width: 100%;
 
                 @include mq(sm) {
-                    height: 35%;
-                    padding-top: rem(40);
+                    top: rem(40);
+                    transform: translate(-50%, 0);
+                    height: rem(50);
+                    width: auto;
                 }
 
                 @include mq(md-and-up) {
-                    position: absolute;
                     top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    
                 }
             }
         }
@@ -107,7 +110,7 @@
 
             @include mq(md-and-up) {
                 padding: rem(44) rem(40);
-                width: calc(100% - rem(208));
+                width: 64%;
             }
         }
     }

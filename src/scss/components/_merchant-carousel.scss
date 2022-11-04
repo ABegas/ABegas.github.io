@@ -2,7 +2,7 @@
     padding-bottom: rem(48);
 
     @include mq(lg) {
-        padding-bottom: rem(55);
+        padding-bottom: rem(112);
     }
 
     h3 {
@@ -62,6 +62,7 @@
             transform: translateY(-50%);
             width: rem(56);
             height: rem(56);
+            cursor: pointer;
         }
 
         &__next,

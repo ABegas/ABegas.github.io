@@ -22,6 +22,7 @@ main {
 
 a {
     color: $color-text-primary;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 h1,
@@ -48,6 +49,14 @@ h2 {
     @include mq(lg) {
         font-size: rem(50);
         line-height: rem(62.5)
+    }
+}
+
+.h2--custom {
+    margin-bottom: rem(56);
+
+    @include mq(md-and-up) {
+        margin-bottom: rem(96)
     }
 }
 
@@ -86,7 +95,6 @@ picture {
     border: 0;
     border-radius: 100%;
     background-color: rgba($color-green, 0.15);
-    cursor: pointer;
     transition: all .5s;
 
     svg {

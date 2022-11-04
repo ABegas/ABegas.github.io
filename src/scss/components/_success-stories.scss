@@ -7,15 +7,15 @@
 
     &__text {
         max-width: rem(710);
-        line-height: rem(24);
+        line-height: rem(28);
         margin: rem(32) auto;
         font-size: rem(20);
         color: $color-text-secondary;
     }
 
     &__review {
-        margin-top: rem(48);
-        
+        margin-top: rem(56);
+
         & > div {
 
             @include mq(sm) {
@@ -42,21 +42,22 @@
         }
         
         &__img {
-            width: rem(70);
+            width: rem(100);
             margin-bottom: rem(16);
             border-radius: 100%;
 
             @include mq(lg) {
-                margin-bottom: rem(30);
+                margin-bottom: rem(34);
             }
         }
         
         &__rate {
             font-size: rem(20);
+            letter-spacing: 1;
             color: $color-yellow;
 
             @include mq(lg) {
-                margin-bottom: rem(30);
+                margin-bottom: rem(34);
             }
         }
 
@@ -64,19 +65,15 @@
             @extend .u-font-secondary-bold;
             font-size: rem(24);
             line-height: rem(34);
+            margin-bottom: rem(20);
 
             @include mq(lg) {
-                padding-bottom: rem(8);
+                margin-bottom: rem(38);
             }
         }
 
         &__reviwer-data {
-            margin-bottom: rem(20);
             color: $color-gray4;
-
-            @include mq(lg) {
-                margin-bottom: rem(35);
-            }
             
             p {
                 margin: rem(8) 0;
@@ -86,5 +83,9 @@
                 }
             }
         }
+    }
+
+    &__cta {
+        margin-top: rem(28);
     }
 }

@@ -6,7 +6,19 @@
 
     @include mq(md-and-up) {
         flex-flow: row nowrap;
-        margin-bottom: rem(128);
+        margin-bottom: rem(160);
+    }
+
+    &--custom-margin {
+        @include mq(md-and-up) {
+            margin-bottom: rem(88);
+        }
+    }
+
+    &--custom-margin__small {
+        @include mq(md-and-up) {
+            margin-bottom: rem(36);
+        }
     }
 
     
@@ -44,8 +56,17 @@
             width: 40%;
         }
 
+        &__title {
+            margin-bottom: rem(32);
+        }
+
+        &__subtitle {
+            line-height: rem(24);
+            margin-bottom: rem(32);
+        }
+
         &__text {
-            padding: rem(16) 0;
+            margin: 0 0 rem(32);
             line-height: rem(24);
             color: $color-text-secondary;
         }

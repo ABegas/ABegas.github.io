@@ -1,6 +1,6 @@
 import {headerNavHover, mobileMenu} from './modules/header.js';
 import accordion from './modules/accordion.js';
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Autoplay } from 'swiper';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -23,13 +23,18 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         },
 
-        modules: [ Navigation ],
+        modules: [ Navigation, Autoplay ],
 
-        // Navigation arrows
         navigation: {
             nextEl: '.c-merchants__carousel__next',
             prevEl: '.c-merchants__carousel__prev',
         },
+
+        autoplay: {
+            delay: 2000,
+        },
+
+        disableOnInteraction: false
     });
 
     headerNavHover();

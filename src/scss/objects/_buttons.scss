@@ -14,9 +14,11 @@
         padding: rem(15) rem(16);
     }
     
-    &:hover {
-        background-color: $color-red;
-        border-color: $color-red;
+    @include mq(hover) {
+        &:hover {
+            background-color: $color-red;
+            border-color: $color-red;
+        }
     }
 
     &__primary {
@@ -25,11 +27,13 @@
     }
 
     &__secondary {
-        background-color: $color-white;
+        background-color: transparent;
         color: $color-text-primary;
 
-        &:hover {
-            color: $color-white;
+        @include mq(hover) {
+            &:hover {
+                color: $color-white;
+            }
         }
     }
 

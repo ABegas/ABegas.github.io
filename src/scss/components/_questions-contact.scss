@@ -40,11 +40,33 @@
     &__list {
         margin-bottom: rem(40);
         border-bottom: rem(1) solid $color-gray2;
+
+        li {
+            padding-bottom: rem(40);
+        }
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+
+            @include mq(hover) {
+                &:hover {
+                    .c-questions-contact__list__icon {
+                        background-color: $color-red;
+
+                        svg {
+                            stroke: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+        
         &__icon {
             margin-right: rem(15);
         }
 
-        dt {
+        &__title {
             @extend .u-font-secondary-bold;
 
             display: flex;
@@ -54,11 +76,11 @@
             line-height: rem(35);
         }
 
-        dd {
+        &__description {
+            display: inline-block;
             line-height: rem(24);
             color: $color-text-secondary;
-            padding-left: rem(16);
-            padding-bottom: rem(40);
+            padding-left: rem(56);
         }
     }
 

@@ -1,10 +1,10 @@
 .c-stat-info {
-    margin: rem(6) 0 rem(56);
+    margin: 0 0 rem(56);
     padding: rem(24) 0;
     background-color: $color-gray1;
 
     @include mq(md-and-up) {
-        margin-bottom: rem(120);
+        margin-bottom: rem(146);
         padding: rem(46) 0;
     }
 
@@ -61,6 +61,7 @@
             @include mq(xlg) {
                 padding-top: 0;
                 font-size: rem(96);
+                line-height: rem(100);
             }
         }    
     }
