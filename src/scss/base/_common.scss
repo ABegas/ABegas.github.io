@@ -28,7 +28,9 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
@@ -56,7 +58,7 @@ h2 {
     margin-bottom: rem(56);
 
     @include mq(md-and-up) {
-        margin-bottom: rem(96)
+        margin-bottom: rem(95)
     }
 }
 
@@ -71,8 +73,20 @@ h3 {
 
 h4 {
     @extend .u-font-secondary-bold;
+    font-size: rem(32);
+    line-height: rem(43);
+}
+
+h5 {
+    @extend .u-font-secondary-bold;
     font-size: rem(24);
     line-height: rem(34);
+}
+
+h6 {
+    @extend .u-font-primary;
+    font-size: rem(28);
+    line-height: rem(35);
 }
 
 img,

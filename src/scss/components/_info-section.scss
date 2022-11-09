@@ -14,10 +14,22 @@
             margin-bottom: rem(88);
         }
     }
+    
+    &--custom-margin__big {
+        @include mq(md-and-up) {
+            margin-bottom: rem(108);
+        }
+    }
 
     &--custom-margin__small {
         @include mq(md-and-up) {
             margin-bottom: rem(36);
+        }
+    }
+
+    &--custom-margin-top {
+        @include mq(md-and-up) {
+            margin-top: rem(80);
         }
     }
 
@@ -100,5 +112,9 @@
         @include mq(md-and-up) {
             width: 60%;
         }
+    }
+
+    .c-hero-banner__list {
+        padding-top: rem(56);
     }
 }

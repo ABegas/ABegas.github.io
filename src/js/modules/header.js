@@ -24,7 +24,7 @@ let headerNavHover = () => {
 
 let mobileMenu = () => {
     const mobileMenuCta = document.querySelector('.js-hamburger-btn');
-    const mobileMenuOpenClass = 'mobile-menu-opened' 
+    const mobileMenuOpenClass = 'mobile-menu-opened'; 
 
     mobileMenuCta.addEventListener('click', () => {
         if(html.classList.contains(mobileMenuOpenClass)) {

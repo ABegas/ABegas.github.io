@@ -113,5 +113,45 @@
                 width: 64%;
             }
         }
+
+        &--custom {
+            padding: rem(40) rem(24);
+            box-shadow: 0 rem(15) rem(15) 0 $color-gray2;
+
+            @include mq(md-and-up) {
+                padding: rem(44) rem(100);
+            }
+
+            h5 {
+                margin-bottom: rem(32);
+            }
+        }
+    }
+
+    &--steps {
+        .c-benefits {
+            &__item__deco {
+                width: rem(85);
+
+                &:after {
+                    width: calc(100% - rem(85));
+                    left: rem(85);
+                }
+            }
+
+            &__item__content {
+                width: calc(100% - rem(85));
+            }
+
+            &__item__deco-wrapper {
+                padding-top: rem(33);
+                text-align: center;
+            }
+
+            &__item__step-num {
+                font-size: rem(32);
+                color: $color-white;
+            }
+        }
     }
 }
