@@ -1,7 +1,7 @@
-import {headerNavHover, mobileMenu, sticky} from './modules/header.js';
+import {headerNavHover, mobileMenu} from './modules/header.js';
 import accordion from './modules/accordion.js';
-import counterAnimation from './modules/counter.js'; 
 import Swiper, { Navigation, Autoplay } from 'swiper';
+import counter from './modules/counter.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -38,13 +38,10 @@ window.addEventListener('DOMContentLoaded', () => {
         disableOnInteraction: false
     });
 
+    
+
     headerNavHover();
     mobileMenu();
     accordion();
-    counterAnimation();
-
-})
-
-window.addEventListener('scroll', () => {
-    counterAnimation();
+    counter();
 })

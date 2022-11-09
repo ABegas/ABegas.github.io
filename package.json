@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "7.19.4",
+    "countup.js": "^2.3.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
@@ -30,6 +31,7 @@
     "gulp-sass": "^5.1.0",
     "sass": "^1.55.0",
     "swiper": "^8.4.4",
+    "waypoints": "^4.0.1",
     "webpack": "5.74.0",
     "webpack-stream": "^7.0.0"
   }
