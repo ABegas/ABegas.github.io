@@ -1,0 +1,22 @@
+.c-text-section {
+    margin-bottom: rem(56);
+    padding: rem(32) 0;
+    box-shadow: 0 rem(15) rem(15) 0 $color-gray2;
+
+    @include mq(md-and-up) {
+        margin-bottom: rem(128);
+        padding: rem(56) 0;
+    }
+
+    h2 {
+        margin-bottom: rem(32);
+    }
+
+    p {
+        max-width: rem(700);
+        margin: rem(32) auto;
+        font-size: rem(20);
+        line-height: rem(28);
+        color: $color-text-secondary;
+    }
+}

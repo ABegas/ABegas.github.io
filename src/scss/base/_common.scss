@@ -11,15 +11,6 @@ main {
     }
 }
 
-.page {
-    height: 100%;
-
-    @include mq(md-and-down) {
-        overflow-x: hidden;
-    }
-    
-}
-
 a {
     color: $color-text-primary;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

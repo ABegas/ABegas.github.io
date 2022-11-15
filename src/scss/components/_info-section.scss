@@ -55,7 +55,18 @@
             .c-info-section__img {
                 width: 50%;
             }
+        }
+    }
 
+    &--dominance-content {
+        @include mq(md-and-up) {
+            .c-info-section__content {
+                width: 58%;
+            }
+            
+            .c-info-section__img {
+                width: 42%;
+            }
         }
     }
 

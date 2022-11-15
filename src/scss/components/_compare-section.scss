@@ -1,0 +1,82 @@
+.c-compare-section {
+    h2 {
+        margin-bottom: rem(32);
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(72);
+        }
+    }
+
+    &__sticky {
+        position: sticky;
+        top: rem(65);
+        background-color: rgba($color-black, .8);
+        color: $color-white;
+        backdrop-filter: blur(rem(4));
+    }
+
+    &__title {
+        height: rem(91);
+        background-color: $color-gray1;
+
+        &__logo {
+            padding-left: rem(20);
+    
+            @include mq(sm) {
+                display: none;
+            }
+    
+            @include mq(md-and-up) {
+                padding-left: rem(32);
+            }
+        }
+    
+        p {
+            text-align: right;
+            padding-right: rem(20);
+    
+            @include mq(sm) {
+                display: none;
+            }
+    
+            @include mq(md-and-up) {
+                padding-right: rem(32);
+            }
+        }
+
+        &__name {
+            @extend .u-font-secondary-bold;
+            font-size: rem(26);
+
+            @include mq(md-and-up) {
+                font-size: rem(32);
+            }
+        }
+    }
+
+    &__separator {
+        width: rem(3);
+        background: rgba($color-gray2, .4);
+    }
+
+    &__shoparize {
+        @extend .u-font-primary-bold;
+        padding: rem(24) rem(16) rem(24) 0;
+        align-self: center;
+        line-height: rem(24);
+
+        @include mq(md-and-up) {
+            padding: rem(56) rem(64) rem(56) rem(32);
+        }
+    }
+
+    &__other {
+        padding: rem(24) 0 rem(24) rem(16);
+        align-self: center;
+        line-height: rem(24);
+
+        @include mq(md-and-up) {
+            padding: rem(56) rem(32) rem(56) rem(64);
+        }
+    }
+}
