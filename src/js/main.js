@@ -2,6 +2,7 @@ import {headerNavHover, mobileMenu} from './modules/header.js';
 import accordion from './modules/accordion.js';
 import Swiper, { Navigation, Autoplay } from 'swiper';
 import counter from './modules/counter.js';
+import compareTitleVisibility from './modules/compare.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -45,3 +46,5 @@ window.addEventListener('DOMContentLoaded', () => {
     accordion();
     counter();
 })
+
+window.addEventListener('scroll', compareTitleVisibility);
