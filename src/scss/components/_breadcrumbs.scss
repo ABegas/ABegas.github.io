@@ -19,5 +19,10 @@
     a {
         text-decoration: none;
         color: $color-text-secondary;
+        transition: color .4s;
+
+        @include mq(hover) {
+            color: $color-red;
+        }
     }
 }

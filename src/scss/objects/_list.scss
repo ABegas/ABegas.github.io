@@ -1,0 +1,56 @@
+.o-list {
+    @extend .u-font-primary-bold;
+
+    li {
+        position: relative;
+        margin-bottom: rem(12);
+
+        &:before {
+            content: url('../img/check.svg');
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: rem(40);
+            height: rem(40);
+            border-radius: 100%;
+            background-color: rgba($color-green, 0.15);
+            padding: rem(12);
+            text-align: center;
+        }
+    }
+
+    a {
+        text-underline-offset: rem(3);
+        transition: color .4s;
+
+        @include mq(hover) {
+            color: $color-red;
+        }
+    }
+
+    p {
+        display: inline-block;
+        min-height: rem(40);
+        padding-left: rem(56);
+        padding-top: rem(6);
+        line-height: rem(24);
+        margin: 0;
+    }
+
+    &__item--disabled {
+        .circle-with-icon {
+            background: $color-disable;
+        }
+    }
+
+   .o-list__item {
+        &--disabled {
+            color: $color-disable-text;
+
+            &:before {
+                content: url('../img/cross.svg');
+            }
+        }
+    }
+}

@@ -1,5 +1,3 @@
-'use stict'
-
 const accordion = () => {
     const accordion = document.querySelector('.js-accordion');
     const accordionItems = accordion.querySelectorAll('.js-accordion-item');

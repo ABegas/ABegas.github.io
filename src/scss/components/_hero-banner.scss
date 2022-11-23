@@ -75,21 +75,10 @@
     }
 
     &__list {
-        @extend .u-font-primary-bold;
         padding-top: rem(32);
 
         @include mq(lg) {
             padding-top: rem(80);
-        }
-
-        li {
-            padding-bottom: rem(6);
-        }
-
-        p {
-            display: inline-block;
-            vertical-align: bottom;
-            padding-left: rem(16);
         }
     }
 }

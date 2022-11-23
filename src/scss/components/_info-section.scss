@@ -17,7 +17,7 @@
     
     &--custom-margin__big {
         @include mq(md-and-up) {
-            margin-bottom: rem(108);
+            margin-bottom: rem(128);
         }
     }
 
@@ -53,7 +53,7 @@
             }
             
             .c-info-section__img {
-                width: 50%;
+                width: 45%;
             }
         }
     }
@@ -114,7 +114,7 @@
             
             @include mq(md-and-up) {
                 margin-top: rem(56);
-                max-width: 75%;
+                max-width: 95%;
             }
         }
     }
@@ -123,6 +123,10 @@
         @include mq(md-and-up) {
             width: 60%;
         }
+    }
+
+    &__list {
+        margin-top: rem(56);
     }
 
     .c-hero-banner__list {

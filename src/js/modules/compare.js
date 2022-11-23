@@ -1,7 +1,3 @@
-'use stict'
-
-const html = document.querySelector('html');
-
 let compareTitleVisibility = () => {
     const compareTitles = document.querySelectorAll('.js-compare-title'),
           titleActiveClass = 'active-title'

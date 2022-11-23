@@ -1,0 +1,56 @@
+.switch-input {
+    display: none;
+}
+
+.switch {
+    display: block;
+    position: relative;
+    width: rem(86);
+    height: rem(32);
+    border-radius: rem(32);
+    background-color: $color-green;
+    cursor: pointer;
+    transition: .3s .1s;
+    -webkit-tap-highlight-color: transparent;
+}
+  
+.switch::before {
+    content: '';
+    position: absolute;
+    top: rem(-10);
+    left: rem(-10);
+    height: rem(48);
+    width: rem(48);
+    border-radius: rem(48);
+    background: $color-white;
+    background: $color-white linear-gradient(45deg, rgba(0,0,0,0.16) 0%, $color-white 100%);
+    box-shadow: -5px 10px 12px rgba(0, 0, 0, 0.16), -5px 20px 32px rgba(0, 0, 0, 0.12);
+    transition: 300ms, width 600ms;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    width: rem(40);
+    height: rem(40);
+    top: rem(-6);
+    left: rem(-6);
+    border-radius: rem(40);
+    background-color: $color-white;
+    transition: 300ms, width 600ms;
+}
+
+.switch-input:checked + .switch {
+    background-color: $color-green;
+    border-color: $color-green;
+}
+
+.switch-input:checked + .switch::before {
+    left: calc(100% + rem(10));
+    transform: translateX(-100%);
+}
+
+.switch-input:checked + .switch::after {
+    left: calc(100% - rem(-6));
+    transform: translateX(-100%);
+}

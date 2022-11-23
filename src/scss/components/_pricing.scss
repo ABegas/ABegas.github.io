@@ -1,0 +1,209 @@
+.c-pricing {
+    margin-top: rem(32);
+
+    &__subtitle {
+        font-size: rem(18);
+        line-height: rem(24);
+        max-width: rem(460);
+        margin: rem(24) auto;
+
+        @include mq(md-and-up) {
+            font-size: rem(20);
+            line-height: rem(28);
+        }
+    }
+
+    &__promo {
+        @extend .u-font-primary-bold;
+        width: rem(235);
+        margin: 0 auto rem(61);
+        padding: rem(12) rem(15);
+        border: rem(1) solid $color-red;
+        border-radius: rem(50);
+        font-size: rem(20);
+    }
+
+    &__switcher {
+        margin-bottom: rem(32);
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(48);
+        }
+    }
+
+    &__switcher-tool {
+        margin: 0 rem(24);
+    }
+
+    &__switcher-value {
+        @extend .u-font-primary-bold;
+        font-size: rem(20);
+        color: $color-disable-text;
+        transition: color .4s;
+
+        @include mq(md-and-up) {
+            font-size: rem(24);
+        }
+    }
+
+    &__plans {
+        margin-bottom: rem(32);
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(48);
+        }
+    }
+
+    &__plan {
+        padding: rem(24);
+        border: rem(1) solid $color-gray2;
+
+        @include mq(sm) {
+            margin-bottom: rem(32);
+        }
+
+        @include mq(md-and-up) {
+            width: 49%;
+            padding: rem(32);
+        }
+
+        h2 {
+            padding-bottom: rem(32);
+            margin-bottom: rem(32);
+            border-bottom: rem(1) solid $color-gray2;
+        }
+
+        &__label {
+            display: inline-block;
+            vertical-align: top;
+            height: rem(40);
+            margin-top: rem(10);
+            padding: rem(10) rem(16);
+            font-size: rem(16);
+            line-height: rem(20);
+            border-radius: rem(40);
+            background: $color-red;
+            color: $color-white;
+            
+            svg {
+                display: inline-block;
+                vertical-align: text-bottom;
+                margin: 0 0 0 rem(8);
+            }
+        }
+
+        &__list {
+            border-bottom: rem(1) solid $color-gray2;
+            padding-bottom: rem(20);
+            margin-bottom: rem(32 );
+        }
+
+        &__custom-item {
+            margin-top: rem(32);
+            color: $color-gray4;
+            
+            &:before {
+                content: none !important;
+            }
+        }
+
+        li {
+            padding-right: rem(40);
+        }
+
+        &--highlighted {
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    &__tooltip-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &:hover {
+            .c-pricing__tooltip-content {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(-50%);
+            }
+        }        
+    }
+
+    &__tooltip-content {
+        position: absolute;
+        border: rem(1) solid $color-gray2;
+        padding: rem(10) rem(15);
+        right: 100%;
+        top: 50%;
+        transform: translateY(-60%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: rem(-15);
+        }
+    }
+
+    &__price {
+        &__inner {
+            margin-bottom: rem(12);
+        }
+        
+        &__currency {
+            @extend .u-font-primary-bold;
+            font-size: rem(36);
+            
+        }
+
+        &__amount {
+            @extend .u-font-primary-bold;
+            font-size: rem(76);
+            line-height: rem(68);
+        }
+
+        &__period {
+            color: $color-gray4;
+            align-self: flex-end;
+            line-height: rem(30);
+        }
+
+        &__extra-shop {
+            @extend .u-font-primary-bold;
+        }
+
+        p {
+            color: $color-gray4;
+            margin: rem(12) 0 rem(32);
+        }
+    }
+
+    &__tax-notification {
+        margin-bottom: rem(48);
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(96);
+        }
+    }
+}
+
+.annualy-plan-active {
+    .c-pricing {
+        &__switcher-value--annual {
+            color: $color-black;
+        }
+    }
+}
+
+.monthly-plan-active {
+    .c-pricing {
+        &__switcher-value--monthly {
+            color: $color-black;
+        }
+    }
+}

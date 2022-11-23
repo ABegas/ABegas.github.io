@@ -1,5 +1,3 @@
-'use stict'
-
 const html = document.querySelector('html');
 
 let headerNavHover = () => {
