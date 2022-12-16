@@ -138,6 +138,7 @@ $tablet: 768px;
 $tablet-down: 1023px; 
 $desktop: 1024px;
 $desktop-lg: 1280px;
+$descktop-xlg: 1640px;
 
 @mixin mq($point) {
     @if $point == hover {
@@ -146,6 +147,9 @@ $desktop-lg: 1280px;
                 @content ;
             }
         } // for hovers
+    }
+    @else if $point == xlg-and-down {
+        @media screen and (max-width: $descktop-xlg), print { @content ; } // ensure we get larger than tablet view on print pages
     }
     @if $point == xlg {
         @media screen and (min-width: $desktop-lg), print { @content ; } // ensure we get larger than tablet view on print pages

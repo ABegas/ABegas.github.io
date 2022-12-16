@@ -6,6 +6,7 @@ import Swiper, { Navigation, Autoplay } from 'swiper';
 import counter from './modules/counter.js';
 import compareTitleVisibility from './modules/compare.js';
 import switcher from './modules/switcher.js';
+import scrollnav from 'scrollnav';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -42,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
         disableOnInteraction: false
     });
 
-    
+    scrollnav.init(document.querySelector('.js-article-content'));
 
     headerNavHover();
     mobileMenu();

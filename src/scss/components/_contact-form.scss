@@ -1,0 +1,38 @@
+.c-contact-block {
+    margin-bottom: rem(48);
+    padding: rem(24) rem(20);
+    box-shadow: 0px 32px 32px rgba(12, 62, 57, 0.07);
+
+    @include mq(md-and-up) {
+        margin-bottom: rem(96);
+        padding: rem(56);
+    }
+
+    h3 {
+        margin-bottom: rem(24);
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__text,
+    &__form {
+        @include mq(md-and-up) {
+            width: 47%;
+        }
+    }
+
+    &__text {
+        font-size: rem(14);
+        line-height: rem(20);
+
+        @include mq(sm) {
+            margin-bottom: rem(32);
+        }
+
+        p {
+            margin: 0 0 rem(16);
+        }
+    }
+}

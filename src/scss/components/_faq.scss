@@ -1,0 +1,59 @@
+.c-faq-accordion {
+    @include accordion;
+    @include accordion-arrow;
+
+    margin-bottom: rem(56);
+
+    @include mq(md-and-up) {
+        margin-bottom: rem(128);
+    }
+
+    &__title {
+        @extend .u-font-secondary-bold;
+        padding: rem(24) rem(34) rem(24) 0;
+        font-size: rem(20);
+        line-height: rem(29);
+    }
+
+    &__item {
+        border-bottom: rem(1) solid $color-gray2;
+
+        &:first-child {
+            border-top: rem(1) solid $color-gray2;
+        }
+    }
+
+    &__content {
+        ul {
+            margin-bottom: rem(24);
+            list-style-type: disc;
+            padding-left: rem(20);
+            line-height: rem(24);
+            color: $color-text-secondary;
+
+            &:last-child {
+                margin-bottom: rem(48);
+            }
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        text-underline-offset: rem(3);
+        transition: color .4s;
+        
+        @include mq(hover) {
+            color: $color-red;
+        }
+    }
+
+    p {
+        color: $color-text-secondary;
+        margin-bottom: rem(24);
+        line-height: rem(24);
+
+        &:last-child {
+            margin-bottom: rem(48);
+        }
+    }
+}

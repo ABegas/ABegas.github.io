@@ -1,5 +1,13 @@
-.o-input-wrapper {
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 rem(14) 0;
+}
+
+.o-input-wrapper,
+.o-textarea-wrapper {
     position: relative;
+    margin-bottom: rem(24);
 
     label {
         position: absolute;
@@ -8,11 +16,14 @@
         font-size: rem(16);
         color: $color-text-secondary;
         transform: translateY(-50%);
-        transition: all .5s;
+        transition: all .4s;
+        transform-origin: left;
+        cursor: pointer;
     }
 }
 
-.o-input {
+.o-input,
+.o-textarea {
     @extend .u-font-primary-bold;
     width: 100%;
     height: rem(64);
@@ -20,6 +31,7 @@
     border: rem(1) solid $color-gray2;
     border-radius: rem(4);
     transition: all .3s;
+    cursor: pointer;
 
     &--icon-right {
         padding-right: rem(60);
@@ -29,7 +41,6 @@
         position: relative;
 
         label {
-
             &::after {
                 content: "•";
                 color: $color-red;
@@ -39,6 +50,46 @@
                 transform: translateY(-50%);
             }
         }
+    }
+
+    &--error {
+
+        .o-input,
+        .o-textarea {
+            border: rem(1) solid $color-red;
+            color: $color-red;
+
+            &:hover {
+                border-color: $color-red;
+            }
+        
+            &:focus {
+                border-color: $color-red;
+                box-shadow: 0 0 0 rem(1) $color-red;
+            }
+        }
+    }
+
+    &--disabled {
+        label {
+            color: $color-disable-text;
+        }
+
+        .o-input,
+        .o-textarea {
+            background: $color-white;
+            
+            &:hover {
+                border-color: $color-gray2;
+            }
+        }
+    }
+
+    &__error {
+        font-size: rem(14);
+        margin-top: rem(-10);
+        color: $color-red;
+        margin-bottom: rem(24);
     }
 
     &:hover {
@@ -51,13 +102,65 @@
         outline: none;
 
         & ~ label {
-            transform: translate(-18px, -22px) scale(.75);
+            transform: translateY(-22px) scale(.75);
         }
     }
 
     &:not(:placeholder-shown) {
         & ~ label {
-            transform: translate(-18px, -22px) scale(.75);
+            transform: translateY(-22px) scale(.75);
+        }
+    }
+}
+
+.o-textarea {
+    height: rem(128);
+    padding-top: rem(28);
+
+    &-wrapper {
+        label {
+            top: rem(28);
+        }
+    }
+}
+
+.o-radio {
+    display: flex;
+    position: relative;
+    margin-bottom: rem(28);
+    cursor: pointer;
+
+    input[type="radio"] {
+        appearance: none;
+        cursor: pointer;
+    
+        &:before {
+            content: "";
+            display: block;
+            height: rem(20);
+            width: rem(20);
+            margin-right: rem(12);
+            background: $color-black;
+            border-radius: 100%;
+            transition: box-shadow .4s;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: rem(2);
+            top: rem(2);
+            width: rem(16);
+            height: rem(16);
+            background-color: $color-white;
+            border-radius: 100%;
+            transition: all .4s;
+        }
+
+        &:checked {
+            &:after {
+                transform: scale(0.5);
+            }
         }
     }
 }

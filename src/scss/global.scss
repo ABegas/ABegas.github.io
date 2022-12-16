@@ -6,12 +6,14 @@
 @import 'utilities/typography';
 @import 'utilities/colors';
 @import 'utilities/visibility';
+@import 'utilities/spaces';
 
 @import 'objects/grid';
 @import 'objects/buttons';
 @import 'objects/forms';
 @import 'objects/list';
 
+@import 'components/accordion';
 @import 'components/social-medias';
 @import 'components/header';
 @import 'components/footer';
@@ -29,3 +31,10 @@
 @import 'components/compare-section';
 @import 'components/pricing';
 @import 'components/switcher';
+@import 'components/blog';
+@import 'components/content';
+@import 'components/global-pagination';
+@import 'components/article';
+@import 'components/contact-form';
+@import 'components/faq';
+@import 'components/contact';

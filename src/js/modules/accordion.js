@@ -1,27 +1,34 @@
 const accordion = () => {
-    const accordion = document.querySelector('.js-accordion');
-    const accordionItems = accordion.querySelectorAll('.js-accordion-item');
-    const accordionItemActiveClass = 'accordion-item-active';
+    const accordion = document.querySelectorAll('.js-accordion'),
+          accordionItemClass = 'js-accordion-item',
+          accordionItemActiveClass = 'accordion-item-active';
+    let _target = null;
 
-    accordionItems.forEach(item => {
-        
-        item.addEventListener('click', (e) => {
-            const accordionContent = e.target.nextElementSibling;
+    accordion.forEach(accordion => {
+        const accordionItems = accordion.querySelectorAll('.' + accordionItemClass);
 
-            if(e.target === item && item.classList.contains(accordionItemActiveClass)) { 
-                e.target.classList.remove(accordionItemActiveClass);
-                accordionContent.style.maxHeight = null;
-            } else {
-                accordionItems.forEach(activeElem => {
-                    activeElem.classList.remove(accordionItemActiveClass);
-                    activeElem.nextElementSibling.style.maxHeight = null;
-                })
-                
-                e.target.classList.add(accordionItemActiveClass);
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            }
+        accordionItems.forEach(item => {    
+            item.addEventListener('click', (e) => {
+                if (e.target.classList.contains(accordionItemClass) && e.target !== 'SPAN') {
+                    _target = e.target;
+                }
+                const accordionContent = _target.nextElementSibling;
+    
+                if(_target && item.classList.contains(accordionItemActiveClass)) { 
+                    _target.classList.remove(accordionItemActiveClass);
+                    accordionContent.style.maxHeight = null;
+                } else {
+                    accordionItems.forEach(activeElem => {
+                        activeElem.classList.remove(accordionItemActiveClass);
+                        activeElem.nextElementSibling.style.maxHeight = null;
+                    })
+                    
+                    _target.classList.add(accordionItemActiveClass);
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                }
+            })
         })
-    })
+    })   
 }
 
 export default accordion;

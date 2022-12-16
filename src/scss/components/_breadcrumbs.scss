@@ -25,4 +25,10 @@
             color: $color-red;
         }
     }
+
+    .p-article & {
+        @include mq(sm) {
+            margin-bottom: rem(16);
+        }
+    }
 }

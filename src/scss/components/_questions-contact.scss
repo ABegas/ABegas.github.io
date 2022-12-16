@@ -99,4 +99,39 @@
             }
         }
     }
+
+    &__text {
+        margin: 0;
+        line-height: rem(24);
+        color: $color-text-secondary;
+    }
+
+    &--secondary {
+        border-top: rem(1) solid $color-gray2;
+        padding-top: rem(24);
+
+        @include mq(md-and-up) {
+            padding-top: rem(32);
+        }
+
+        .c-questions-contact__list {
+            border-bottom: none;
+            margin-bottom: 0;
+
+            &__title {
+                @extend .u-font-primary;
+                font-size: rem(16);
+                color: $color-text-secondary;
+                line-height: rem(20);
+            }
+
+            &__description {
+                @extend .u-font-secondary-bold;
+                position: relative;
+                top: rem(-5);
+                font-size: rem(20);
+                color: $color-black;
+            }
+        }
+    }
 }

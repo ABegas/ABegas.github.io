@@ -1,0 +1,251 @@
+.c-article {
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+
+    &-header {
+        position: relative;
+        color: $color-white;
+
+        &__image {
+            img {
+                height: rem(407);
+                width: 100%;
+                object-fit: cover;
+                filter: brightness(65%);
+            }
+        }
+
+        &__content {
+            position: absolute;
+            left: 50%;
+            top: rem(50);
+            transform: translateX(-50%);
+        }
+
+        &__tag {
+            @extend .u-font-secondary-bold;
+
+            margin-bottom: rem(20);
+            font-size: rem(20);
+        }
+    }
+
+    &__date {
+        padding: rem(20) 0;
+        margin-bottom: rem(20);
+        font-size: rem(14);
+        border-bottom: rem(1) solid $color-gray2;
+
+        @include mq(md-and-up) {
+            padding: rem(32) 0;
+            margin-bottom: rem(48);
+        }
+
+        &__creation-date {
+            @extend .u-font-primary-bold;
+
+            padding-right: rem(32);
+            color: $color-text-secondary;
+        }
+
+        &__counter {
+            color: $color-disable-text;
+        }
+    }
+
+    .scroll-nav {
+        @include mq(sm) {
+            display: none;
+        }
+
+        @include mq(md-and-up) {
+            width: rem(170);
+        }
+
+        @include mq(lg) {
+            width: rem(294);
+        }
+
+        &__list {
+            @extend .u-font-primary-bold;
+            font-size: rem(12);
+            line-height: rem(16);
+            list-style: none;
+            padding: 0;
+
+            @include mq(md-and-up) {
+                position: sticky;
+                top: rem(120);
+            }
+        }
+
+        &__item {
+            margin-bottom: rem(16);
+
+            &--active a {
+                color: $color-black;
+            }
+        }
+
+        &__link {
+            color: $color-text-secondary;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+
+    &__content {
+        color: $color-text-secondary;
+        line-height: rem(24);
+
+        @include mq(md-and-up) {
+            margin-top: rem(48);
+        }
+
+        &__right {        
+            @include mq(md-and-up) {
+                width: calc(100% - rem(170));
+                padding-left: rem(40);
+            }
+
+            @include mq(lg) {
+                width: calc(100% - rem(294));
+                padding-left: rem(96);
+            }
+        }
+
+        &__introduction {
+            @extend .u-font-secondary-bold;
+            margin-bottom: rem(32);
+            margin-top: 0;
+            font-size: rem(18);
+            color: $color-black;
+            line-height: rem(26);
+        }
+
+        h2 {
+            font-size: rem(24);
+            line-height: rem(26);
+            margin: rem(48) 0 rem(24);
+            color: $color-black;
+        }
+
+        p {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__bottom {
+        @include mq(md-and-up) {
+            float: right;
+            width: calc(100% - rem(170));
+            padding-left: rem(40);
+        }
+
+        @include mq(lg) {
+            float: right;
+            width: calc(100% - rem(294));
+            padding-left: rem(96);
+        }
+    }
+
+    &__content-footer {
+        margin: rem(8) 0 rem(32);
+        padding-bottom: rem(32);
+        border-bottom: rem(1) solid $color-gray2;
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(56);
+            padding-bottom: rem(56);
+        }
+    }
+
+    &__back-to {
+        @extend .u-font-secondary;
+        font-size: rem(20);
+        text-decoration: none;
+        transition: all .4s;
+
+        @include mq(sm) {
+            display: inline-block;
+            margin-bottom: rem(32);
+        }
+
+        svg {
+            stroke: $color-black;
+            margin-right: rem(4);
+            transition: all .4s;
+        }
+
+        @include mq(hover) {
+            color: $color-red;
+
+            svg {
+                margin-right: rem(-2);
+                stroke: $color-red;
+                transform: translateX(rem(-2));
+            }
+        }
+    }
+
+    &__share {
+        @extend .u-font-secondary-bold;
+        font-size: rem(20);
+
+        &__list {
+            margin: rem(16) 0 0;
+            font-size: 0;
+            text-decoration: none;
+
+            li {
+                display: inline-block;
+                margin-right: rem(10);
+            }
+
+            @include mq(md-and-up) {
+                margin: 0 rem(16) 0;
+            }
+
+            svg {
+                opacity: .3;
+                transition: opacity .4s;
+
+                @include mq(hover) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__recommendations {
+
+        @include mq(sm) {
+            margin-bottom: rem(32);
+        }
+
+        p {
+            margin-bottom: rem(24);
+            font-size: rem(18);
+        }
+
+        li {
+            margin-bottom: rem(12);
+            line-height: rem(24);
+        }
+
+        a {
+            text-decoration: none;
+            transition: color .4s;
+
+            @include mq(hover) {
+                color: $color-red;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.c-pagination {
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(370);
+    margin: 0 auto rem(48);
+    text-align: center;
+
+    @include mq(md-and-up) {
+        margin-bottom: rem(96);
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        @extend .u-font-secondary-bold;
+
+        display: inline-block;
+        padding: rem(19) 0;
+        min-width: rem(56);
+        text-decoration: none;
+        border-radius: rem(4);
+
+        &.active {
+            background: $color-black;
+            color: $color-white;
+        }
+    }
+
+    svg {
+        height: rem(10);
+    }
+}

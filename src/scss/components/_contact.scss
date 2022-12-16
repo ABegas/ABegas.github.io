@@ -1,0 +1,109 @@
+.c-contact {
+    &__left,
+    &__right {
+        margin-bottom: rem(56);
+
+        @include mq(md-and-up) {
+            width: 42%;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(24);
+
+        @include mq(sm) {
+            margin-bottom: rem(32);
+            font-size: rem(64);
+        }
+    }
+
+    &__intro {
+        font-size: rem(18);
+        line-height: rem(28);
+
+        @include mq(md-and-up) {
+            font-size: rem(20);
+        }
+    }
+
+    &__radio-label {
+        font-size: rem(20);
+        line-height: rem(28);
+
+        @include mq(sm) {
+            margin-top: rem(14);
+        }
+
+        &:after {
+            content: "•";
+                color: $color-red;
+                margin-left: rem(5);
+        }
+    }
+
+    &__form-fields {
+        margin-bottom: 0;
+    }
+
+    &__privacy {
+        margin-top: 0;
+        margin-bottom: rem(24);
+        color: $color-text-secondary;
+        font-size: rem(14);
+        line-height: rem(20);
+    }
+
+    &__title-right {
+        margin-bottom: rem(32);
+        
+        @include mq(sm) {
+            margin-bottom: rem(24);
+            font-size: rem(26);
+        }
+    }
+
+    &__live-support {
+        margin-bottom: rem(24);
+
+        @include mq(lg) {
+            display: flex;
+        }
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(20);
+        }
+
+        img {
+            width: rem(80);
+        }
+
+        p {
+            @extend .u-font-primary-bold;
+            width: calc(100% - rem(80));
+            margin: 0;
+            align-self: center;
+            padding: 0 rem(20);
+            font-size: rem(14);
+            line-height: rem(20);
+        }
+
+        li {
+            margin-bottom: rem(12);
+
+            @include mq(md-and-up) {
+                width: 50%;
+            }
+        }
+    }
+
+    &__support-hours {
+        margin-bottom: rem(24);
+        font-size: rem(12);
+        line-height: rem(16);
+        color: $color-text-secondary;
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(32);
+        }
+    }
+}

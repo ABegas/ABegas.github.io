@@ -49,7 +49,7 @@ const watch = () => {
     gulp.watch('./src/**/*.html', html);
     gulp.watch('./src/scss/**/*.scss', scss);
     gulp.watch('./src/js/**/*.js', js);
-    gulp.watch('src/img/*', img);
+    gulp.watch('src/img/**/*', img);
 }
 
 const dev = gulp.series(

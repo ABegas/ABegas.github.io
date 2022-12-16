@@ -1,0 +1,9 @@
+.u-mb-56 {
+    margin-bottom: rem(56);
+}
+
+@include mq(md-and-up) {
+    .u-mb-120\@md-and-up {
+        margin-bottom: rem(120);
+    }
+}

@@ -114,34 +114,63 @@
         &--highlighted {
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.12);
         }
+
+        &--right {
+            @include mq(xlg-and-down) {
+                .c-pricing__tooltip-content {
+                    right: 0;
+                    left: auto;
+                }
+            }
+            
+        }
     }
 
     &__tooltip-icon {
         position: absolute;
         right: 0;
+        left: auto;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
+        z-index: 1;
+        transition: all .4s;
 
         &:hover {
+            z-index: 2;
             .c-pricing__tooltip-content {
                 opacity: 1;
                 visibility: visible;
-                transform: translateY(-50%);
             }
         }        
     }
 
     &__tooltip-content {
         position: absolute;
-        border: rem(1) solid $color-gray2;
+        width: rem(240);
+        background: $color-white;
         padding: rem(10) rem(15);
-        right: 100%;
-        top: 50%;
-        transform: translateY(-60%);
+        right: 0;
+        top: calc(100% + rem(8));
         opacity: 0;
         visibility: hidden;
+        box-shadow: 0 rem(15) rem(15) 0 $color-gray2;
         transition: all .4s;
+        z-index: 2;
+
+        @include mq(md-and-up) {
+            right: auto;
+            left: rem(-5);
+            
+        }
+
+        p {
+            @extend .u-font-primary;
+            font-size: rem(14);
+            line-height: rem(20);
+            padding: 0;
+            margin-top: rem(8);
+        }
 
         &::after {
             content: '';
@@ -179,7 +208,11 @@
 
         p {
             color: $color-gray4;
-            margin: rem(12) 0 rem(32);
+            margin: rem(12) 0 0;
+        }
+
+        a {
+            margin-top: rem(32);
         }
     }
 
@@ -197,6 +230,21 @@
         &__switcher-value--annual {
             color: $color-black;
         }
+
+        &--annually {
+            max-height: rem(50);
+        }
+
+        &__price__amount--monthly {
+            display: none;
+        } 
+
+        &__plan__label--annually,
+        &--annually {
+            opacity: 1;
+            visibility: visible;
+            transition: all .4s;
+        }
     }
 }
 
@@ -204,6 +252,26 @@
     .c-pricing {
         &__switcher-value--monthly {
             color: $color-black;
+        }
+
+        &__price__amount--annually {
+            display: none;
+        }
+
+        &__plan__label--annually,
+        &--annually {
+            opacity: 0;
+            visibility: hidden;
+            transition: all .4s;
+        }
+
+        &__plan__label--annually {
+            transform: translateX(rem(15));
+        }
+
+        &--annually {
+            max-height: 0;
+            transform: translateY(rem(-5));
         }
     }
 }

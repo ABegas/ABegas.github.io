@@ -1,0 +1,126 @@
+.c-content {
+    &__header {
+        margin-bottom: rem(32);
+
+        @include mq(md-and-up) {
+            margin-bottom: rem(128);
+            margin-top: rem(80);
+        }
+
+        &__left {
+            @include mq(md-and-up) {
+                margin-right: rem(10);
+            }
+        }
+
+        h1 {
+            margin-bottom: rem(24);
+
+            @include mq(sm) {
+                font-size: rem(64);
+            }
+
+            @include mq(md-and-up) {
+                margin-bottom: rem(32);
+            }
+        }
+
+        p {
+            font-size: rem(18);
+            margin-bottom: rem(40);
+
+            @include mq(md-and-up) {
+                font-size: rem(20);
+                margin-bottom: rem(16);
+            }
+        }
+
+        &__tags {
+            margin: 0 rem(-8);
+
+            @include mq(md-and-up) {
+                padding-top: rem(10);
+            }
+
+            li {
+                display: inline-block;
+                margin: rem(8) rem(7);
+
+                @include mq(md-and-up) {
+                    margin: rem(11) rem(8);
+                }
+            }
+        }
+        &__tags-item {
+            @extend .u-font-secondary;
+            
+            display: inline-block;
+            padding: rem(8) rem(16);
+            background: $color-disable;
+            border-radius: rem(30);
+            text-decoration: none;
+            transition: .4s;
+
+            @include mq(md-and-up) {
+                padding: rem(12) rem(24);
+                font-size: rem(20);
+            }
+
+            @include mq(hover) {
+                &:hover {
+                    color: $color-white;
+                    background: $color-black;
+                    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.12);
+                }
+            }
+
+            &--active {
+                color: $color-white;
+                background: $color-black;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.12);
+            }
+            
+        }
+
+        .p-faq & {
+            @include mq(md-and-up) {
+                margin-bottom: rem(72);
+            }
+        }
+    }
+
+    &__header-article {
+        position: relative;
+
+        &__content {
+            position: relative;
+            top: rem(-45);
+            width: 100%;
+            background: rgba(27, 35, 40, 0.7);
+            backdrop-filter: blur(rem(40));
+            color: $color-white;
+            padding: rem(28) 0;
+
+            @include mq(md-and-up) {
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                padding: rem(56) 0 rem(88);
+            }
+        }
+
+        h2 {
+            @include mq(sm) {
+                font-size: rem(26);
+                line-height: rem(35);
+            }
+        }
+
+        &__title {
+            @extend .u-font-secondary-bold;
+            font-size: rem(20);
+            margin-bottom: rem(20);
+        }
+    }
+}

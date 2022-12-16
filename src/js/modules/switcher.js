@@ -3,14 +3,14 @@ const parentElem = document.querySelector('.js-switcher-parent'),
       annuallyClass = 'annualy-plan-active',
       monthlyClass = 'monthly-plan-active';
 
-let switcherExist = () => {
-    if (switcher.checked) {
+let checkSwitcherExist = () => {
+    if (switcher != null) {
         return true;
     }
 }
 
-let addActivatePlanClass = () => {
-    if (switcherExist()) {
+let toggleActivePlanClass = () => {
+    if (switcher.checked) {
         parentElem.classList.add(annuallyClass);
         parentElem.classList.remove(monthlyClass);
     } else {
@@ -19,18 +19,13 @@ let addActivatePlanClass = () => {
     }
 }
 
-if (switcherExist()) {
-    addActivatePlanClass();
-}
-
 let switchActiveClasses = () => {
-    if (switcher != null) {
+    if (checkSwitcherExist()) {
+        toggleActivePlanClass();
         switcher.addEventListener('change', () => {
-            addActivatePlanClass();
+            toggleActivePlanClass();
         })
     }
 }
-
-
 
 export default switchActiveClasses;
