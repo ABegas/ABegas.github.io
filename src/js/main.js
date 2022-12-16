@@ -10,6 +10,8 @@ import scrollnav from 'scrollnav';
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    document.addEventListener("touchstart", function(){}, true);
+
     const swiper = new Swiper('.js-swiper', {
         // Optional parameters
         direction: 'horizontal',

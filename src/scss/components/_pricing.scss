@@ -118,8 +118,12 @@
         &--right {
             @include mq(xlg-and-down) {
                 .c-pricing__tooltip-content {
-                    right: 0;
+                    right: rem(-10);
                     left: auto;
+
+                    &:before {
+                        right: rem(12);
+                    }
                 }
             }
             
@@ -136,7 +140,8 @@
         z-index: 1;
         transition: all .4s;
 
-        &:hover {
+        &:hover,
+        &:active {
             z-index: 2;
             .c-pricing__tooltip-content {
                 opacity: 1;
@@ -150,18 +155,32 @@
         width: rem(240);
         background: $color-white;
         padding: rem(10) rem(15);
-        right: 0;
-        top: calc(100% + rem(8));
+        right: rem(-10);
+        top: calc(100% + rem(12));
         opacity: 0;
         visibility: hidden;
-        box-shadow: 0 rem(15) rem(15) 0 $color-gray2;
+        box-shadow: 0 0 rem(15) 0 $color-gray2;
         transition: all .4s;
         z-index: 2;
 
         @include mq(md-and-up) {
             right: auto;
-            left: rem(-5);
+            left: rem(-12);
             
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: rem(-7);
+            width: rem(15);
+            height: rem(15);
+            background: $color-white;
+            transform: rotate(45deg);
+
+            @include mq(sm) {
+                right: rem(12);
+            }
         }
 
         p {
@@ -170,12 +189,6 @@
             line-height: rem(20);
             padding: 0;
             margin-top: rem(8);
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            right: rem(-15);
         }
     }
 
@@ -231,19 +244,19 @@
             color: $color-black;
         }
 
+        &__plan__label--annually,
+        &--annually {
+            opacity: 1;
+            visibility: visible;
+            transition: all .4s;
+        }
+
         &--annually {
             max-height: rem(50);
         }
 
         &__price__amount--monthly {
             display: none;
-        } 
-
-        &__plan__label--annually,
-        &--annually {
-            opacity: 1;
-            visibility: visible;
-            transition: all .4s;
         }
     }
 }
@@ -254,10 +267,6 @@
             color: $color-black;
         }
 
-        &__price__amount--annually {
-            display: none;
-        }
-
         &__plan__label--annually,
         &--annually {
             opacity: 0;
@@ -265,8 +274,16 @@
             transition: all .4s;
         }
 
+        &__price__amount--annually {
+            display: none;
+        }
+
         &__plan__label--annually {
             transform: translateX(rem(15));
+
+            @include mq(sm) {
+                display: none;
+            }
         }
 
         &--annually {
