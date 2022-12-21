@@ -10,7 +10,6 @@
     &__steps {
         padding: rem(56) rem(48);
         margin-bottom: rem(32);
-        box-shadow: 0 rem(15) rem(15) 0 $color-gray2;
         text-align: center;
 
         @include mq(md-and-up) {
@@ -48,7 +47,6 @@
         position: relative;
         margin-top: rem(45);
         padding-bottom: rem(28);
-        cursor: pointer;
 
         @include mq(md-and-up) {
             margin: 0;

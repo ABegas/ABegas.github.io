@@ -1,6 +1,5 @@
 @import 'libs/normalize';
 @import 'base/settings';
-@import 'base/common';
 
 @import 'utilities/widths';
 @import 'utilities/typography';
@@ -12,6 +11,8 @@
 @import 'objects/buttons';
 @import 'objects/forms';
 @import 'objects/list';
+
+@import 'base/common';
 
 @import 'components/accordion';
 @import 'components/social-medias';

@@ -25,6 +25,7 @@
 
     @include mq(lg) {
         backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
 
         &::after {
             opacity: 0.9;
@@ -188,6 +189,10 @@
                 height: rem(3);
                 background-color: $color-gray3;
                 transition: .3s all;
+
+                @include mq(md-and-down) {
+                    background-color: $arrow-green;
+                }
 
                 @include mq(lg) {
                     top: rem(10);

@@ -1,7 +1,6 @@
 .c-text-section {
     margin-bottom: rem(56);
     padding: rem(32) rem(24);
-    box-shadow: 0 rem(15) rem(15) 0 $color-gray2;
 
     @include mq(md-and-up) {
         margin-bottom: rem(128);

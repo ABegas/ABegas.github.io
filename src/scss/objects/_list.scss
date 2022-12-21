@@ -38,18 +38,13 @@
         margin: 0;
     }
 
-    &__item--disabled {
-        .circle-with-icon {
-            background: $color-disable;
-        }
-    }
-
    .o-list__item {
         &--disabled {
             color: $color-disable-text;
 
             &:before {
                 content: url('../img/cross.svg');
+                background: $color-disable;
             }
         }
     }

@@ -128,6 +128,7 @@
         padding: rem(24) 0 rem(24) rem(16);
         align-self: center;
         line-height: rem(24);
+        color: $color-text-secondary;
 
         @include mq(md-and-up) {
             padding: rem(56) rem(32) rem(56) rem(64);
