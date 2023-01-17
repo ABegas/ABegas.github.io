@@ -25,6 +25,10 @@ $gutter: $base-gutter;
         &--narrow {
             flex: none;
         }
+
+        &--end {
+            align-self: flex-end;
+        }
     }
 
     &--gutter {

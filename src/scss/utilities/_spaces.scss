@@ -2,6 +2,11 @@
     margin-bottom: rem(56);
 }
 
+.u-my-0 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 @include mq(md-and-up) {
     .u-mb-120\@md-and-up {
         margin-bottom: rem(120);
@@ -9,5 +14,9 @@
 
     .u-mt-40\@md-and-up {
         margin-top: rem(40);
+    }
+
+    .u-pr-80\@md-and-up {
+        padding-right: rem(80);
     }
 }

@@ -114,12 +114,17 @@
             
             @include mq(md-and-up) {
                 margin-top: rem(56);
-                max-width: 95%;
+                max-width: 85%;
             }
         }
     }
 
     &__img {
+        @include mq(sm) {
+            width: 100%;
+            text-align: center;
+        }
+
         @include mq(md-and-up) {
             width: 60%;
         }

@@ -34,6 +34,12 @@ h1 {
     }
 }
 
+.h1--custom {
+    @include mq(md-and-down) {
+        font-size: rem(64);
+    }
+}
+
 h2 {
     @extend .u-font-secondary-bold;
     font-size: rem(40);

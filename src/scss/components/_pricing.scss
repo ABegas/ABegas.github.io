@@ -55,6 +55,7 @@
     }
 
     &__plan {
+        display: flex;
         padding: rem(24);
         border: rem(1) solid $color-gray2;
 
@@ -71,6 +72,10 @@
             padding-bottom: rem(32);
             margin-bottom: rem(32);
             border-bottom: rem(1) solid $color-gray2;
+        }
+
+        &__info {
+            height: 100%;
         }
 
         &__label {
@@ -193,6 +198,15 @@
     }
 
     &__price {
+        
+        @include mq(md-and-up) {
+            position: sticky;
+            bottom: rem(10);
+            background: $color-white; 
+            box-shadow: 0px -10px 35px 21px #fff;
+            z-index: 1;
+        }
+
         &__inner {
             margin-bottom: rem(12);
         }
