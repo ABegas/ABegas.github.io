@@ -1,0 +1,16 @@
+.c-banner-to-top-wrapper {
+    padding-top: rem(65);
+    padding-bottom: rem(1);
+    margin-bottom: rem(56);
+    background: $color-section-blue;
+
+    @include mq(lg) {
+        padding-top: rem(96);
+        padding-bottom: 0;
+        margin-bottom: rem(96);
+    }
+
+    &--mb0 {
+        margin-bottom: 0; 
+    }
+}

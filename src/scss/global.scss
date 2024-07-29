@@ -2,10 +2,12 @@
 @import 'base/settings';
 
 @import 'utilities/widths';
+@import 'utilities/heights';
 @import 'utilities/typography';
 @import 'utilities/colors';
 @import 'utilities/visibility';
 @import 'utilities/spaces';
+@import 'utilities/decorations';
 
 @import 'objects/grid';
 @import 'objects/buttons';
@@ -18,6 +20,7 @@
 @import 'components/social-medias';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/banner-to-top-wrapper';
 @import 'components/hero-banner';
 @import 'components/merchant-carousel';
 @import 'components/info-section';
@@ -39,3 +42,9 @@
 @import 'components/contact-form';
 @import 'components/faq';
 @import 'components/contact';
+@import 'components/partner';
+@import 'components/reviews';
+@import 'components/consultant';
+@import 'components/custom-carousel';
+@import 'components/comparison'
+

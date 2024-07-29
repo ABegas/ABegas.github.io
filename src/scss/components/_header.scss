@@ -3,20 +3,31 @@
     background: transparent;   
     position: fixed;
     top: rem(0);
-    z-index: $z-index-secondary;
+    z-index: 4;
     
     &::after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
-        background: $color-white;
         width: 100%;
         height: 100%;
         z-index: -1;
         opacity: 1;
         filter: none;
         transition: all .3s;
+    }
+
+    &:hover {
+        &::after {
+            background: $color-white;
+        }
+    }
+
+    &.header-stuck {
+        &::after {
+            background: $color-white;
+        }
     }
 
     @include mq(md-and-down) {
@@ -44,7 +55,7 @@
     &__logo {
         width: rem(170);
 
-        @include mq(lg) {
+        @include mq(xlg) {
             width: rem(200);
         }
 
@@ -62,12 +73,11 @@
         }
 
         @media screen and (max-width: 1440px) {
-            max-width: rem(1285);
             margin: 0 auto;
         }
 
         @media screen and (min-width: 1440px) {
-            padding: 0 5%;;
+            padding: 0 5%;
         }
     }
 
@@ -127,6 +137,18 @@
         a {
             text-decoration: none;
         }
+
+        &:hover {
+            .c-header__nav__item-link--arrow {
+                &::after {
+                    transform: rotate(45deg);
+                }
+        
+                &::before {
+                    transform: rotate(-45deg);
+                }                
+            }
+        }
     }
 
     &__nav__item-link {
@@ -135,24 +157,12 @@
         transition: opacity .3s;
         cursor: pointer;
 
-        @include mq(xlg) {
-            font-size: rem(20);
+        @include mq(lg) {
+            margin-right: rem(22);  
         }
 
-        @include mq(lg) {
-            margin-right: rem(22);
-
-            &:hover {
-                .c-header__nav__item-link--arrow {
-                    &::after {
-                        transform: rotate(45deg);
-                    }
-            
-                    &::before {
-                        transform: rotate(-45deg);
-                    }                
-                }
-            }
+        @include mq(xlg) {
+            font-size: rem(19);
         }
 
         @include mq(md-and-down) {
@@ -227,8 +237,8 @@
     &__subnav {
         position: absolute;
         width: rem(275);
-        top: rem(56);
-        left: rem(-36);
+        top: rem(70);
+        left: 0;
         background: $color-white;
         transition: .3s all;
 
@@ -236,10 +246,19 @@
             transform: translateY(rem(-10));
             visibility: hidden;
             opacity: 0;
+            border-radius: rem(8);
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: rem(20);
+                position: absolute;
+                left: 0;
+                top: rem(-20);
+            }
         }
 
         &__item {
-
             @include mq(md-and-down) {
                 &:nth-child(even) {
                     background-color: $color-gray0;
@@ -276,14 +295,21 @@
             order: -1;
             padding: 0 rem(10);
             justify-content: space-between;
+            flex-direction: column;
 
-            li {
-                width: 50%;
+            > li {
+                width: 100%;
                 padding: 0 rem(10);
             }
         }
 
         &__button {
+            font-size: rem(14);
+
+            @include mq(xlg) {
+                font-size: rem(20);
+            }
+            
             @include mq(lg) {
                 margin-right: rem(24);
             }
@@ -295,30 +321,72 @@
     }
 
     &__utility-nav__link {
-        font-size: rem(20);
+        font-size: rem(14);
         text-decoration: none;
         transition: color .3s;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: rem(56);
+
+        @include mq(xlg) {
+            font-size: rem(20);
+        }
+
+        @include mq(md-and-down) {
+            justify-content: center;
+            margin: 0 auto;
+        }
 
         @include mq(hover) {
             &:hover {
                 color: $color-red;
             }
         }
+    }
+
+    &__account-locale {
+        height: 56px;
+        align-items: center;
+        background: $color-white;
+        display: flex;
+        
+        @include mq(lg) {
+            padding: rem(12) rem(14);
+            border-radius: rem(8);
+            box-shadow: 0 rem(5) rem(13) 0 rgba(0, 0, 0, 0.04);
+        }
 
         @include mq(md-and-down) {
-            height: rem(56);
-            width: 100%;
-            display: inline-block;
-            padding: rem(14) rem(20);
-            border: rem(2) solid $color-black;
-            font-size: rem(20);
-            text-align: center;
-            border-radius: rem(4);
-            text-decoration: none;
-            cursor: pointer;
-            transition: all .5s;
-            background-color: $color-white;
-            color: $color-text-primary;
+            justify-content: space-between;
+            margin-top: rem(15);
+        }
+
+        li {
+            @include mq(md-and-down) {
+                border: rem(2) solid $color-black;
+                border-radius: rem(8);
+                width: 27%;
+            }
+
+            &:first-child {
+                @include mq(lg) {
+                    border-right: 1px solid $color-gray2;
+                    padding-right: rem(12);
+                    margin-right: rem(12);
+                }
+
+                @include mq(md-and-down) {
+                    width: 70%;
+                }
+                
+            }
+        }
+
+        svg {
+            margin: 0 rem(5);
         }
     }
 

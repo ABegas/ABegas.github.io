@@ -1,4 +1,13 @@
 .c-footer {
+    &__top {
+        padding-top: rem(96);
+
+        @include mq(sm) {
+            padding-top: rem(56);
+            padding-bottom: rem(56);
+        }
+    }
+
     &__signup {
         padding: rem(48) 0 rem(32);
 

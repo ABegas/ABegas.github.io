@@ -53,3 +53,8 @@
     padding-left: $base-gutter * 2;
     padding-right: $base-gutter * 2;
 }
+
+.u-info-text-width {
+    max-width: rem(700);
+    margin: 0 auto;
+}

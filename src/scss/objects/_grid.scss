@@ -77,4 +77,7 @@ $gutter: $base-gutter;
     }
 
     &--nowrap { flex-wrap: nowrap; }
+    &--gap27 {gap: rem(27)}
+    &--gap32 {gap: rem(32)}
+    &--gap48 {gap: rem(48)}
 }

@@ -1,4 +1,5 @@
 const html = document.querySelector('html');
+const header = document.querySelector('.js-header');
 
 let headerNavHover = () => {
     
@@ -33,4 +34,12 @@ let mobileMenu = () => {
     })
 }
 
-export {headerNavHover, mobileMenu};
+let headerTopPosition = () => {
+    if((document.documentElement.scrollTop || document.body.scrollTop) >= 20) {
+        header.classList.add('header-stuck');
+    } else {
+        header.classList.remove('header-stuck');
+    }
+}
+
+export {headerNavHover, mobileMenu, headerTopPosition};

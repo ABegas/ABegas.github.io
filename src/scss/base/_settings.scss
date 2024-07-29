@@ -46,8 +46,8 @@ colors,fonts,sizes,breakpoints ect.*/
 }
 
 /*------------------------------- # FONTS # ------------------------------------*/
-$family-primary: 'Inter', sans-serif;
-$family-secondary: 'Ubuntu', sans-serif;
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'Ubuntu', sans-serif;
 
 $base-font-size: rem(16);
 
@@ -59,8 +59,8 @@ $font-size3: rem(16);
 $font-size4: rem(18);
 $font-size5: rem(20);
 $font-size6: rem(24);
-$font-size7: rem(32);
-$font-size8: rem(48);
+$font-size7: rem(28);
+$font-size8: rem(32);
 
 /* Line Height */
 $line-height1: rem(16);
@@ -82,12 +82,20 @@ $color-black: #1B2328;
 $color-white: #fff;
 
 $color-blue: #007DC2;
+$color-blue-light: #5292FB;
 $color-accent-blue: #577590;
 $color-green: #3dbeb3;
 $color-green-light: #5ac8bf;
 $color-orange: #F7981D;
 $color-red: #E51F37;
 $color-yellow: #FDD05A;
+$color-section-blue: #F0F6FF;
+
+//Cards colors
+$color-green-x-light: #f1f9f8;
+$card-blue: #f2f7ff;
+$card-yellow: #fff8ec;
+$card-red: #ffeeef;
 
 /* Grayscale */
 $color-gray0: #F9F9F9;

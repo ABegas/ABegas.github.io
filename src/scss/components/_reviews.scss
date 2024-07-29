@@ -1,0 +1,26 @@
+.c-reviews {
+    gap: rem(32);
+    align-items: flex-start;
+
+    &__item {
+        background: $color-white;
+        padding: rem(24);
+        border-radius: rem(18);
+
+        @include mq(md-and-up) {
+            min-width: 30%;
+        }
+
+        @include mq(sm) {
+            margin-bottom: rem(20);
+        }
+
+        p {
+            line-height: rem(25);
+        }
+    }
+
+    .c-success-stories__review__rate {
+        margin-bottom: rem(16);
+    }
+}

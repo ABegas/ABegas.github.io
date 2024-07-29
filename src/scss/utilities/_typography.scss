@@ -8,6 +8,11 @@
 
 /* Text align utilities */
 .u-text-center { text-align: center; }
+.u-text-center\@sm {
+    @include mq(sm) {
+        text-align: center;
+    }
+}
 .u-text-left { text-align: left; }
 .u-text-right { text-align: right; }
 .u-text-justify { text-align: justify; }
@@ -22,27 +27,33 @@
 
 /* Font Size */
 .u-font-primary {
-    font-family: $family-primary;
+    font-family: $font-primary;
     font-weight: 400;
 }
 
 .u-font-primary-bold {
-    font-family: $family-primary;
+    font-family: $font-primary;
     font-weight: 700;
 }
 
 .u-font-secondary {
-    font-family: $family-secondary;
+    font-family: $font-secondary;
     font-weight: 500;
 }
 
 .u-font-secondary-bold {
-    font-family: $family-secondary;
+    font-family: $font-secondary;
     font-weight: 700;
 }
 
 .u-paragraph-primary {
     line-height: rem(24);
+    color: $color-text-secondary;
+}
+
+.u-paragraph-secondary {
+    line-height: rem(20);
+    line-height: rem(28);
     color: $color-text-secondary;
 }
 
@@ -54,9 +65,10 @@
 .u-font-size4 { font-size: $font-size4; } /* 18px */
 .u-font-size5 { font-size: $font-size5; } /* 20px */
 .u-font-size6 { font-size: $font-size6; } /* 24px */
-.u-font-size7 { font-size: $font-size7; } /* 32px */
+.u-font-size7 { font-size: $font-size7; } /* 28px */
 
 /* Line-height */
+.u-line-height0 {line-height: 0;}
 .u-line-height1 { line-height: $line-height1; } /* 16 */
 .u-line-height2 { line-height: $line-height2; } /* 18 */
 .u-line-height3 { line-height: $line-height3; } /* 20 */
