@@ -1,0 +1,68 @@
+.c-partner {
+    margin-bottom: rem(120);
+
+    @include mq(sm) {
+        margin-bottom: rem(56);
+    }
+
+    &__blocks {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        @include mq(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        @extend .u-font-primary;
+
+        @include mq(md-and-up) {
+            width: 31%;
+            max-width: rem(378);
+        }
+
+        @include mq(sm) {
+            margin-bottom: rem(56);
+        }
+
+        svg {
+            margin-bottom: rem(32);
+        }
+
+        p {
+            line-height: rem(25);
+            color: $color-gray4;
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__logo-list {
+        display: flex;
+        flex-flow: row wrap;
+        gap: rem(20);
+
+        @include mq(md-and-up) {
+            gap: rem(27);
+        }
+
+        li {
+            background: $color-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: rem(180);
+            border-radius: rem(18);
+            width: 100%;
+
+            @include mq(md-and-up) {
+                width: calc(33.3333% - rem(27));
+            }
+
+            @include mq(xlg) {
+                width: calc(20% - rem(27));
+            }
+        }
+    }
+}

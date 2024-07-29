@@ -1,0 +1,45 @@
+.c-consultant {
+    background: $color-white;
+    border-radius: rem(24);
+    padding: rem(36) rem(24);
+
+    @include mq(lg) {
+        display: flex;
+    }
+
+    &__img-wrapper {
+        margin-right: rem(24);
+        float: left;
+
+        @include mq(lg) {
+            float: none;
+        }
+
+        img {
+            border-radius: 50%;
+            border: rem(5) solid $color-white;
+        }
+        
+    }
+
+    &__actions {
+        clear: both;
+        a,
+        button {
+            width: 100%;
+
+            @include mq(xlg) {
+                width: auto;
+            }
+        }
+    }
+
+    &__cta {
+        margin-bottom: rem(16);
+
+        @include mq(xlg) {
+            margin-right: rem(8);
+            margin-bottom: 0;
+        }
+    }
+}

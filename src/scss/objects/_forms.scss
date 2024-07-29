@@ -166,3 +166,34 @@ fieldset {
         }
     }
 }
+
+.o-custom-select {
+    background: $color-white;
+    height: 64px;
+    border: solid 1px $color-gray2;
+    border-radius: 4px;
+    padding-top: 10px;
+
+    &__flag {
+        width: rem(24);
+        height: rem(24);
+        margin: rem(8) rem(12);
+        float: left;
+    }
+
+    &__label {
+        display: block;
+        font-size: rem(12);
+        color: $color-gray4;
+        margin-bottom: rem(6);
+    }
+
+    select {
+        width: calc(100% - rem(65));
+        border: none;
+        -webkit-appearance: none;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNyAxMSIgZmlsbD0iIzFCMjMyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS41MDAxNSAwLjU4NTkzOEw4LjUwMDE1IDcuNTg1OTRMMTUuNTAwMiAwLjU4NTkzOEwxNi45MTQ0IDIuMDAwMTVMOC41MDAxNSAxMC40MTQ0TDAuMDg1OTM3NSAyLjAwMDE1TDEuNTAwMTUgMC41ODU5MzhaIi8+PC9zdmc+Cg==) no-repeat;
+        background-position: 100% top !important;
+        outline: none;
+    }
+}

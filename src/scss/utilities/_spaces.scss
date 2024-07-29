@@ -1,22 +1,102 @@
-.u-mb-56 {
-    margin-bottom: rem(56);
-}
+//Margin Top
+.u-mt-10 { margin-top: rem(10); }
 
-.u-my-0 {
-    margin-bottom: 0;
-    margin-top: 0;
-}
+//Margin Bottom
+.u-mb-8 { margin-bottom: rem(8); }
+.u-mb-15 { margin-bottom: rem(15); }
+.u-mb-16 { margin-bottom: rem(16); }
+.u-mb-20 { margin-bottom: rem(20); }
+.u-mb-24 { margin-bottom: rem(24); }
+.u-mb-30 { margin-bottom: rem(30); }
+.u-mb-34 { margin-bottom: rem(30); }
+.u-mb-56 { margin-bottom: rem(56); }
+
+//Margin Right
+.u-mr-10 { margin-right: rem(10); }
+.u-mr-16 { margin-right: rem(16); }
+
+//Margin Y
+.u-my-20 { margin-block: rem(20); }
+
+//Padding X
+.u-px-0 { padding-inline: 0; }
+.u-px-24 { padding-inline: rem(24); }
+
+//Padding Y
+.u-py-27 { padding-block: rem(27); }
+
+//Padding
+.u-p-40 { padding: rem(40); }
+
+
 
 @include mq(md-and-up) {
-    .u-mb-120\@md-and-up {
-        margin-bottom: rem(120);
+    //Margin Top
+    .u-mt-40\@md-and-up { margin-top: rem(40); }
+
+    //Margin Bottom
+    .u-mb-56\@md-and-up { margin-bottom: rem(56); }
+    .u-mb-70\@md-and-up { margin-bottom: rem(70); }
+    .u-pr-80\@md-and-up { padding-right: rem(80); }
+    .u-mb-82\@md-and-up { margin-bottom: rem(82); }
+    .u-mb-96\@md-and-up { margin-bottom: rem(96); }
+    .u-mb-120\@md-and-up { margin-bottom: rem(120); }
+
+    //Margin right
+    
+    .u-py-82\@md-and-up {
+        padding-block: rem(82);
     }
 
-    .u-mt-40\@md-and-up {
-        margin-top: rem(40);
+    .u-py-56\@md-and-up {
+        padding-block: rem(56);
     }
 
-    .u-pr-80\@md-and-up {
-        padding-right: rem(80);
+    
+
+    .u-mr-12\@md-and-up {
+        margin-right: rem(12);
+    }
+
+    .u-px-13\@md-and-up {
+        padding-inline: rem(13);
+    }
+}
+
+@include mq(sm) {
+    .u-mb-56\@sm {
+        margin-bottom: rem(56);
+    }
+
+    .u-mb-40\@sm {
+        margin-bottom: rem(40);
+    }
+
+    .u-mb-42\@sm {
+        margin-bottom: rem(42);
+    }
+
+    .u-mb-20\@sm {
+        margin-bottom: rem(20);
+    }
+
+    .u-mb-24\@sm {
+        margin-bottom: rem(24);
+    }
+
+    .u-mb-16\@sm {
+        margin-bottom: rem(16);
+    }
+
+    .u-pt-12\@sm {
+        padding-top: rem(12);
+    }
+
+    .u-py-56\@sm {
+        padding-block: rem(56);
+    }
+
+    .u-px-34\@sm {
+        padding-inline: rem(34);
     }
 }

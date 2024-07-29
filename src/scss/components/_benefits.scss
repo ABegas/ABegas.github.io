@@ -153,4 +153,35 @@
             }
         }
     }
+
+    &__new {
+        margin: 0 rem(-13);
+
+        h5 {
+            font-size: rem(22);
+        }
+
+        li {
+            padding-inline: rem(13);
+            margin-bottom: rem(30);
+
+            @include mq(md-and-up) {
+                margin-bottom: rem(40);
+            }
+        }
+
+        &__img {
+            height: rem(180);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: rem(30);
+            background: $card-blue;
+            border-radius: rem(18);
+        }
+
+        &__content {
+            padding-inline: rem(8);
+        }
+    }
 }

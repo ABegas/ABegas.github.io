@@ -41,7 +41,23 @@
         width: 100%;
     }
 
+    &--icon {
+        @include mq(hover) {
+            svg,
+            path {
+                transition: all 0.3s;
+                fill: $color-white;
+            }
+        }
+    }
+
     @include mq(sm) {
         width: 100%;
+    }
+
+    &--default-size-mobile {
+        @include mq(sm) {
+            width: auto;
+        }
     }
 }

@@ -2,7 +2,7 @@
     margin-bottom: rem(56);
 
     @include mq(md-and-up) {
-        margin-bottom: rem(128);
+        margin-bottom: rem(106);
     }
 
     h2 {
@@ -29,16 +29,17 @@
     }
 
     &__item {
-        padding: rem(40) rem(32);
-        border: rem(1) solid $color-gray2;
-        border-radius: rem(4);
+        padding: rem(40) rem(40) rem(12);
+        border-radius: rem(24);
+        box-shadow: 0px 53px 61.5px 0px #1B232814;
+        background: $color-white;
 
         @include mq(sm) {
             margin-bottom: rem(24);
         }
 
         @include mq(md-and-up) {
-            margin-left: rem(24);
+            margin-left: rem(32);
 
             &:first-child {
                 margin-left: 0;
@@ -51,6 +52,7 @@
             align-items: center;
             height: rem(134);
             margin-bottom: rem(34);
+            border-radius: rem(16);
     
             svg {
                 height: 100%;

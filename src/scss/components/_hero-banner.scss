@@ -1,6 +1,5 @@
 .c-hero-banner {
     margin-bottom: rem(48);
-    background: linear-gradient(241.25deg, #E0EFF8 0%, rgba(255, 255, 255, 0) 70.72%);
 
     @include mq(md-and-up) {
         margin-bottom: rem(80);

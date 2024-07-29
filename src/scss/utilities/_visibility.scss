@@ -18,6 +18,10 @@
     border: 0;
 }
 
+.u-hidden-overflow {
+    overflow: hidden;
+}
+
 @include mq(lg) {
     .u-visible\@lg { display: inherit; }
     .u-hidden\@lg { display: none !important; }
