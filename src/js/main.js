@@ -7,6 +7,7 @@ import counter from './modules/counter.js';
 import compareTitleVisibility from './modules/compare.js';
 import switcher from './modules/switcher.js';
 import scrollnav from 'scrollnav';
+import marketingWidget from './modules/marketingWidget.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -53,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     accordion();
     counter();
     switcher();
+    marketingWidget();
     
 })
 

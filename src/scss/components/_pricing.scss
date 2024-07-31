@@ -49,6 +49,10 @@
     &__plans {
         margin-bottom: rem(32);
 
+        @include mq(md-and-down) {
+            display: block;
+        }
+
         @include mq(md-and-up) {
             margin-bottom: rem(48);
         }
@@ -58,17 +62,18 @@
         display: flex;
         padding: rem(24);
         border: rem(1) solid $color-gray2;
+        border-radius: rem(3);
 
         @include mq(sm) {
             margin-bottom: rem(32);
         }
 
         @include mq(md-and-up) {
-            width: 49%;
             padding: rem(32);
         }
 
-        h2 {
+        h3 {
+            font-size: rem(38);
             padding-bottom: rem(32);
             margin-bottom: rem(32);
             border-bottom: rem(1) solid $color-gray2;
@@ -81,9 +86,9 @@
         &__label {
             display: inline-block;
             vertical-align: top;
-            height: rem(40);
-            margin-top: rem(10);
-            padding: rem(10) rem(16);
+            height: rem(38);
+            margin-top: rem(5);
+            padding: rem(8) rem(16);
             font-size: rem(16);
             line-height: rem(20);
             border-radius: rem(40);
@@ -93,7 +98,7 @@
             svg {
                 display: inline-block;
                 vertical-align: text-bottom;
-                margin: 0 0 0 rem(8);
+                margin: 0 0 0 rem(5);
             }
         }
 
