@@ -1,0 +1,36 @@
+.c-marketing-notification {
+    position: fixed;
+    left: rem(20);
+    bottom: rem(20);
+    border-radius: rem(15);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.12);
+    border: rem(1) solid #eeeeee;
+    background: $color-white;
+    padding: rem(8) rem(25) rem(8) rem(8);
+    width: rem(344);
+    z-index: 10;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.4s;
+
+    &.is-shown {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    p {
+        padding-left: rem(15);
+        color: $color-gray4;
+        font-size: rem(13);
+        line-height: rem(22);
+    }
+
+    &__close {
+        border: none;
+        background: none;
+        position: absolute;
+        top: rem(8);
+        right: rem(12);
+        cursor: pointer;
+    }
+}
