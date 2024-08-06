@@ -51,7 +51,8 @@
 
     &__title {
         height: rem(66);
-        background-color: $color-gray1;
+        background-color: $color-section-blue;
+        border-radius: rem(18);
 
         @include mq(md-and-up) {
             height: rem(91);
